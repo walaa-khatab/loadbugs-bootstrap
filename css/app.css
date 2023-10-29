@@ -1,0 +1,17 @@
+.header {
+  background-color: lightblue;
+  height: 100px;
+  margin: auto;
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  -webkit-border-radius: 0 0 16px 16px;
+  -moz-border-radius: 0 0 16px 16px;
+  -o-border-radius: 0 0 16px 16px;
+  border-radius: 0 0 16px 16px;
+}
+
+/*# sourceMappingURL=app.css.map */

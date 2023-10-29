@@ -1,0 +1,10 @@
+.header{
+    //code for test sass and mixins
+    background-color: lightblue;
+    height: 100px;
+    margin: auto;
+    font-weight: bold;
+    font-size: 30px;
+    @include flex(row,center,center);
+    @include bord_radius(0 0 16px 16px);
+}

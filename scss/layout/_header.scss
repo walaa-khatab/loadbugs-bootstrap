@@ -1,10 +1,91 @@
 .header{
-    //code for test sass and mixins
-    background-color: lightblue;
-    height: 100px;
-    margin: auto;
-    font-weight: bold;
-    font-size: 30px;
-    @include flex(row,center,center);
-    @include bord_radius(0 0 16px 16px);
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 20px;
+    min-height: 70px;
+    padding: 0 30px;
+    @include flex(row,space-between,center);
+    .header-left{
+        @include flex(row,start,center);
+        .header-main-logo,.header-logo{
+            height: 64px;
+            img{
+                @extend %img-full-contain;
+            }
+        }
+    }
+
+    .header-right{
+        @include flex(row,start,center);
+        .cart-icon{
+            width: 44px;
+            height: 44px;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.02);
+                @include bord_radius(50%);
+            }
+            svg{
+                @include svg-feather-icon($text-color,20px,20px);
+            }
+        }
+        .separator{
+            width: 1px;
+            background-color: rgba(0,0,0,0.1);
+            height: 25px;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+        .profile{
+            &_button{
+                @include bord_radius(5px);
+                    font-size: 1rem;
+                    line-height: 1.5;
+                    font-weight: 700;
+                    font-family: 'DM Sans',sans-serif;
+                    padding: 6px 8px;
+                    color: $text-color;
+                    &::after{
+                        display: none;
+                    }
+                    svg{
+                        @include svg-feather-icon($text-color,20px,20px);
+                    }
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.02);
+                }
+            }
+            &_drop{
+                top:20px!important;
+                padding: 30px;
+                border: 0;
+                box-shadow: 1px 2px 10px rgba(0,0,0,0.08);
+                @include bord_radius(5px);
+                .control{
+                    padding: 24px 16px;
+                    min-width: 230px;
+                    @include flex(row,start,center);
+                    .control-icon{
+                        padding: 6px 8px;
+                        width: 50px;
+                        height: 40px;
+                        @include bord_radius(10px);
+                        margin-inline-end: 16px;
+                        svg{
+                            @include svg-feather-icon($main-color,18px,18px);
+                        }
+                    }
+                    &:hover{
+                        background-color: rgba(0, 0, 0, 0.03);
+                        .control-icon{
+                            background-color: white;
+                        }
+                    }
+                }
+                .sign-out{
+                    background-color: $main-color ;
+                    color: white;
+                }
+            }
+        }
+    }
 }

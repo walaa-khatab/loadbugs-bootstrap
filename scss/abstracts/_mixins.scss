@@ -32,3 +32,9 @@
   height: $px;
   overflow: hidden;
 }
+
+@mixin svg-feather-icon($s,$w,$h){
+  stroke: $s;
+  width: $w;
+  height: $h;
+}

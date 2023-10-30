@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Loadbugs</title>
+    <!------faveicons------->
+    <link rel="icon" type="image/x-icon" href="images/fav.png">
+    <link rel="apple-touch-icon" href="images/fav.png" />
     <!----------Styles------------->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -13,15 +16,46 @@
     <!----------------------------->
 </head>
 <body>
+    <div class="container-fluid">
 
-    <!-------for test-------->
-    <div class="container">
-        <div class="header"> Header </div>
-        <div class="text-center pt-5">
-            <input type="text" name="daterange" value="01/01/2023 - 01/20/2023" />
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="header-main-logo">
+                <img src="images/logo.png" alt="">
+            </div> 
+            <div class="header-logo">
+                <img src="images/dlvago.png" alt="">
+            </div> 
         </div>
-    </div>
-    
+
+        <div class="header-right">
+            <button type="button" class="btn cart-icon">
+                <i data-feather="shopping-cart"></i>
+            </button>
+            <span class="separator"></span>
+            <div class="profile">
+
+                <div class="dropdown">
+                    <button class="btn profile_button dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                       User Name
+                       <i data-feather="chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu profile_drop" aria-labelledby="dropdownMenuButton1">
+                        <div><a class="dropdown-item control" href="#">
+                            <button class="btn control-icon" type="button">
+                                <i data-feather="cpu"></i>
+                            </button> 
+                            Control Panel</a></div>
+                        <a class="dropdown-item sign-out" href="#">Sign out</a>
+                    </div>
+                </div>
+
+            </div> 
+        </div>
+    </header>
+    <!----end of container fluid----->     
+    </div>  
     <!-----------scripts------------>
     <script src="js/jquery.min.js"></script>
 
@@ -32,6 +66,9 @@
     <!---------daterangepicker--------->
     <script src="js/moment.min.js"></script>
     <script src="js/daterangepicker.min.js"></script>
+
+    <!------------feather icons---------->
+    <script src="js/feather.min.js"></script>
 
     <script src="js/main.js"></script>
     <!------------------------------>

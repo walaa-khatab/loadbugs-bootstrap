@@ -1,0 +1,27 @@
+.content-body {
+  height: 90vh;
+  .sidebar {
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px !important;
+    border-radius: 20px;
+    padding: 0 30px;
+    margin-top: auto;
+    max-width: 240px;
+    a,
+    .nav-link {
+      color: $text-color;
+      font-size: 15px;
+      font-weight: 600;
+      //   text-transform: uppercase;
+    }
+    li {
+      ul {
+        span {
+          font-size: 13px;
+        }
+        padding-left: 10px !important;
+      }
+    }
+  }
+}

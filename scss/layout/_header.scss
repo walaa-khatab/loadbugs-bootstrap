@@ -4,6 +4,12 @@
     border-radius: 20px;
     min-height: 70px;
     padding: 0 30px;
+    top: 0;
+    left: auto;
+    right: 0;
+    // background-color: #1b97f5;
+   
+    position: relative;
     @include flex(row,space-between,center);
     .header-left{
         @include flex(row,start,center);

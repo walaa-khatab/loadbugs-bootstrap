@@ -12,6 +12,9 @@
 
     <link rel="stylesheet" href="css/daterangepicker.css" />
 
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/buttons.dataTables.min.css">
+
     <link rel="stylesheet" href="css/app.css" />
     <!----------------------------->
   </head>
@@ -267,7 +270,95 @@
               </div>
             </div>
           </div>
-          <div class="col py-3">page content here</div>
+          <div class="col py-3">
+                <!-- datatable -->
+                
+        <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" name="select_all" value="1" id="example-select-all"></th>
+                        <th>AWB</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                        <th>City</th>
+                        <th>District</th>
+                        <th>Comment</th>
+                        <th>Print</th>
+                        <th>Edit</th>
+                        <th>History</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>AWB 1</td>
+                        <td>Name example</td>
+                        <td>Phone example</td>
+                        <td>Address example</td>
+                        <td>Status example</td>
+                        <td>Amount example</td>
+                        <td>City example</td>
+                        <td>District example</td>
+                        <td>Comment example</td>
+                        <td>Print example</td>
+                        <td>Edit example</td>
+                        <td>History example</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>AWB 2</td>
+                        <td>Name example</td>
+                        <td>Phone example</td>
+                        <td>Address example</td>
+                        <td>Status example</td>
+                        <td>Amount example</td>
+                        <td>City example</td>
+                        <td>District example</td>
+                        <td>Comment example</td>
+                        <td>Print example</td>
+                        <td>Edit example</td>
+                        <td>History example</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>AWB 3</td>
+                        <td>Name example</td>
+                        <td>Phone example</td>
+                        <td>Address example</td>
+                        <td>Status example</td>
+                        <td>Amount example</td>
+                        <td>City example</td>
+                        <td>District example</td>
+                        <td>Comment example</td>
+                        <td>Print example</td>
+                        <td>Edit example</td>
+                        <td>History example</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>AWB 4</td>
+                        <td>Name example</td>
+                        <td>Phone example</td>
+                        <td>Address example</td>
+                        <td>Status example</td>
+                        <td>Amount example</td>
+                        <td>City example</td>
+                        <td>District example</td>
+                        <td>Comment example</td>
+                        <td>Print example</td>
+                        <td>Edit example</td>
+                        <td>History example</td>
+                    </tr>
+                </tbody>
+            
+        </table>
+
+
+                <!-- datatable -->
+   </div>
         </div>
       </div>
       <!----end of container fluid----->
@@ -285,6 +376,17 @@
 
     <!------------feather icons---------->
     <script src="js/feather.min.js"></script>
+
+    <!--------Datatable-------->
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.buttons.min.js"></script>
+    <script src="js/jszip.min.js"></script>
+    <script src="js/pdfmake.min.js"></script>
+    <script src="js/vfs_fonts.js"></script>
+    <script src="js/buttons.html5.min.js"></script>
+    <script src="js/buttons.print.min.js"></script>
+    <script src="js/dataTables.responsive.min.js"></script>
+    <script src="js/customDatatable.js"></script>
 
     <script src="js/main.js"></script>
     <!------------------------------>

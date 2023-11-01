@@ -118,7 +118,7 @@ button:focus {
     background-color: white;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px !important;
     border-radius: 20px;
-    padding: 0 30px;
+    padding: 0 15px;
     margin-top: auto;
     max-width: 240px; }
     .content-body .sidebar a,
@@ -133,12 +133,29 @@ button:focus {
 
 .product-card {
   max-width: 100%;
-  box-shadow: -3px 0px 13px 1px rgba(0, 0, 0, 0.76); }
+  box-shadow: -3px 0px 13px 1px rgba(165, 164, 164, 0.178);
+  border-radius: 10px; }
   .product-card .product-img {
     width: 100%;
     height: 70%;
-    background-color: green; }
+    background-color: green;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
     .product-card .product-img img {
       max-width: 100%; }
+  .product-card .product-name {
+    padding: 10px 10px 0px 10px;
+    text-align: center; }
+    .product-card .product-name a {
+      text-align: center;
+      color: #f8ac2d;
+      text-decoration: none;
+      font-weight: 600; }
+  .product-card .product-price {
+    font-size: 13px;
+    text-align: center;
+    color: #99a1b5;
+    font-weight: 500;
+    padding-bottom: 20px; }
 
 /*# sourceMappingURL=app.css.map */

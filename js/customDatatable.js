@@ -1,19 +1,32 @@
 $(document).ready(function(){
-    var table = $('#example').DataTable({
+    var table = $('#datatableOrders').DataTable({
     language: {
-        search: '<i data-feather="search"></i>'
+        search: '<i data-feather="search"></i>',
+        "searchPlaceholder":"Search ...",
+        oPaginate: {
+            sNext: '<i data-feather="arrow-right-circle"></i>',
+            sPrevious: '<i data-feather="arrow-left-circle"></i>',
+        }
     },
-    "responsive": true,
-    'columnDefs': [{
-         'targets': 0,
-         'searchable': false,
-         'orderable': false,
-         'className': 'dt-body-center',
-         'render': function (data, type, full, meta){
+    responsive: true,
+    autoWidth:false,
+    'columnDefs': [
+        { responsivePriority: 1, targets: 0 },
+        { responsivePriority: 3, targets: -3 ,searchable: false,orderable: false,className: 'dt-body-center edit-action',},
+        { responsivePriority: 4, targets: -2,searchable: false,orderable: false,className: 'dt-body-center print-action', },
+        { responsivePriority: 5, targets: -1 ,searchable: false,orderable: false,className: 'dt-body-center hist-action',},
+        {
+        targets: 1,
+        searchable: false,
+        orderable: false,
+        responsivePriority: 2,
+        className: 'dt-body-center',
+        render: function (data, type, full, meta){
             return '<input type="checkbox" name="id[]" value="' + $('<div/>').text(data).html() + '">';
-         },
-      }],
-    dom: 'Blfrtip',
+            },
+        }
+    ],
+    dom: 'Bfrtip',
     buttons: [{
                 extend:    'copyHtml5',
                 text:      '<i data-feather="copy"></i>',
@@ -39,10 +52,12 @@ $(document).ready(function(){
                 text:      '<i data-feather="printer"></i>',
                 titleAttr: 'Print'
             }],
-    'order': [[1, 'asc']]
+    'order': [[0, 'asc']],
+    "drawCallback": function( settings ) {
+        feather.replace();
+    }
    });
 
-  
    // Handle click on "Select all" control
    $('#example-select-all').on('click', function(){
       // Get all rows with search applied

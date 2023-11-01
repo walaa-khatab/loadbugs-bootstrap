@@ -1,8 +1,11 @@
 body{
     font-family: 'DM Sans',sans-serif;
+    overflow-x: hidden;
 }
 button,
-button:focus{
+button:focus,
+button:focus-visible,
+input:focus-visible{
     outline: 0!important;
     box-shadow: none!important;
 }

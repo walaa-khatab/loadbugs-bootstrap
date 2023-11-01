@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="css/responsive.dataTables.min.css">
 
     <link rel="stylesheet" href="css/app.css" />
     <!----------------------------->
@@ -272,90 +273,225 @@
           </div>
           <div class="col py-3">
                 <!-- datatable -->
-                
-        <table id="example" class="display" style="width:100%">
-                <thead>
-                    <tr>
-                        <th><input type="checkbox" name="select_all" value="1" id="example-select-all"></th>
-                        <th>AWB</th>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Status</th>
-                        <th>Amount</th>
-                        <th>City</th>
-                        <th>District</th>
-                        <th>Comment</th>
-                        <th>Print</th>
-                        <th>Edit</th>
-                        <th>History</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td>AWB 1</td>
-                        <td>Name example</td>
-                        <td>Phone example</td>
-                        <td>Address example</td>
-                        <td>Status example</td>
-                        <td>Amount example</td>
-                        <td>City example</td>
-                        <td>District example</td>
-                        <td>Comment example</td>
-                        <td>Print example</td>
-                        <td>Edit example</td>
-                        <td>History example</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>AWB 2</td>
-                        <td>Name example</td>
-                        <td>Phone example</td>
-                        <td>Address example</td>
-                        <td>Status example</td>
-                        <td>Amount example</td>
-                        <td>City example</td>
-                        <td>District example</td>
-                        <td>Comment example</td>
-                        <td>Print example</td>
-                        <td>Edit example</td>
-                        <td>History example</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>AWB 3</td>
-                        <td>Name example</td>
-                        <td>Phone example</td>
-                        <td>Address example</td>
-                        <td>Status example</td>
-                        <td>Amount example</td>
-                        <td>City example</td>
-                        <td>District example</td>
-                        <td>Comment example</td>
-                        <td>Print example</td>
-                        <td>Edit example</td>
-                        <td>History example</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>AWB 4</td>
-                        <td>Name example</td>
-                        <td>Phone example</td>
-                        <td>Address example</td>
-                        <td>Status example</td>
-                        <td>Amount example</td>
-                        <td>City example</td>
-                        <td>District example</td>
-                        <td>Comment example</td>
-                        <td>Print example</td>
-                        <td>Edit example</td>
-                        <td>History example</td>
-                    </tr>
-                </tbody>
-            
-        </table>
-
+          <div class="row w-100">
+            <div class="col-12"> 
+              <table id="datatableOrders" class="display nowrap" >
+                      <thead>
+                          <tr> 
+                              <th># </th>
+                              <th><input type="checkbox" name="select_all" value="1" id="example-select-all"></th>
+                              <th>AWB</th>
+                              <th>Name</th>
+                              <th>Phone</th>
+                              <th>Address</th>
+                              <th>Status</th>
+                              <th>Amount</th>
+                              <th>City</th>
+                              <th>District</th>
+                              <th>Comment</th>
+                              <th>Edit</th>
+                              <th>Print</th>
+                              <th>History</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr> 
+                              <td>#1 </td>
+                              <td></td>
+                              <td>AWB 1</td>
+                              <td>Name example</td>
+                              <td>Phone example</td>
+                              <td>Address example</td>
+                              <td>Status example</td>
+                              <td>Amount example</td>
+                              <td>City example</td>
+                              <td>District example</td>
+                              <td>Comment example</td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="edit"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="printer"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="alert-circle"></i></a></td>
+                          </tr>
+                          <tr>
+                              <td>#2</td>
+                              <td></td>
+                              <td>AWB 2</td>
+                              <td>Name example</td>
+                              <td>Phone example</td>
+                              <td>Address example</td>
+                              <td>Status example</td>
+                              <td>Amount example</td>
+                              <td>City example</td>
+                              <td>District example</td>
+                              <td>Comment example</td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="edit"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="printer"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="alert-circle"></i></a></td>
+                          </tr>
+                          <tr> 
+                              <td>#3</td>
+                              <td></td>
+                              <td>AWB 3</td>
+                              <td>Name example</td>
+                              <td>Phone example</td>
+                              <td>Address example</td>
+                              <td>Status example</td>
+                              <td>Amount example</td>
+                              <td>City example</td>
+                              <td>District example</td>
+                              <td>Comment example</td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="edit"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="printer"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="alert-circle"></i></a></td>
+                          </tr>
+                          <tr>
+                              <td>#4</td>
+                              <td></td>
+                              <td>AWB 4</td>
+                              <td>Name example</td>
+                              <td>Phone example</td>
+                              <td>Address example</td>
+                              <td>Status example</td>
+                              <td>Amount example</td>
+                              <td>City example</td>
+                              <td>District example</td>
+                              <td>Comment example</td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="edit"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="printer"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="alert-circle"></i></a></td>
+                          </tr>
+                          <tr> 
+                              <td>#1 </td>
+                              <td></td>
+                              <td>AWB 1</td>
+                              <td>Name example</td>
+                              <td>Phone example</td>
+                              <td>Address example</td>
+                              <td>Status example</td>
+                              <td>Amount example</td>
+                              <td>City example</td>
+                              <td>District example</td>
+                              <td>Comment example</td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="edit"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="printer"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="alert-circle"></i></a></td>
+                          </tr>
+                          <tr>
+                              <td>#2</td>
+                              <td></td>
+                              <td>AWB 2</td>
+                              <td>Name example</td>
+                              <td>Phone example</td>
+                              <td>Address example</td>
+                              <td>Status example</td>
+                              <td>Amount example</td>
+                              <td>City example</td>
+                              <td>District example</td>
+                              <td>Comment example</td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="edit"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="printer"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="alert-circle"></i></a></td>
+                          </tr>
+                          <tr> 
+                              <td>#3</td>
+                              <td></td>
+                              <td>AWB 3</td>
+                              <td>Name example</td>
+                              <td>Phone example</td>
+                              <td>Address example</td>
+                              <td>Status example</td>
+                              <td>Amount example</td>
+                              <td>City example</td>
+                              <td>District example</td>
+                              <td>Comment example</td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="edit"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="printer"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="alert-circle"></i></a></td>
+                          </tr>
+                          <tr>
+                              <td>#4</td>
+                              <td></td>
+                              <td>AWB 4</td>
+                              <td>Name example</td>
+                              <td>Phone example</td>
+                              <td>Address example</td>
+                              <td>Status example</td>
+                              <td>Amount example</td>
+                              <td>City example</td>
+                              <td>District example</td>
+                              <td>Comment example</td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="edit"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="printer"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="alert-circle"></i></a></td>
+                          </tr>
+                          <tr> 
+                              <td>#1 </td>
+                              <td></td>
+                              <td>AWB 1</td>
+                              <td>Name example</td>
+                              <td>Phone example</td>
+                              <td>Address example</td>
+                              <td>Status example</td>
+                              <td>Amount example</td>
+                              <td>City example</td>
+                              <td>District example</td>
+                              <td>Comment example</td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="edit"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="printer"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="alert-circle"></i></a></td>
+                          </tr>
+                          <tr>
+                              <td>#2</td>
+                              <td></td>
+                              <td>AWB 2</td>
+                              <td>Name example</td>
+                              <td>Phone example</td>
+                              <td>Address example</td>
+                              <td>Status example</td>
+                              <td>Amount example</td>
+                              <td>City example</td>
+                              <td>District example</td>
+                              <td>Comment example</td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="edit"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="printer"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="alert-circle"></i></a></td>
+                          </tr>
+                          <tr> 
+                              <td>#3</td>
+                              <td></td>
+                              <td>AWB 3</td>
+                              <td>Name example</td>
+                              <td>Phone example</td>
+                              <td>Address example</td>
+                              <td>Status example</td>
+                              <td>Amount example</td>
+                              <td>City example</td>
+                              <td>District example</td>
+                              <td>Comment example</td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="edit"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="printer"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="alert-circle"></i></a></td>
+                          </tr>
+                          <tr>
+                              <td>#4</td>
+                              <td></td>
+                              <td>AWB 4</td>
+                              <td>Name example</td>
+                              <td>Phone example</td>
+                              <td>Address example</td>
+                              <td>Status example</td>
+                              <td>Amount example</td>
+                              <td>City example</td>
+                              <td>District example</td>
+                              <td>Comment example</td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="edit"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="printer"></i></a></td>
+                              <td><a href="#" class="table-action-btn"><i  data-feather="alert-circle"></i></a></td>
+                          </tr>
+                      </tbody>
+                  
+              </table>
+            </div>
+          </div>  
 
                 <!-- datatable -->
    </div>

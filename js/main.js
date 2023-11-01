@@ -4,5 +4,6 @@ $(document).ready(function(){
 
     /*------datarangepicker init----*/
     $('input[name="daterange"]').daterangepicker();
+
     
 });

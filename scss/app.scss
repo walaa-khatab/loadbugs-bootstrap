@@ -4,8 +4,11 @@
 @import "abstracts/mixins";
 @import "abstracts/placeholder";
 
+
 @import "layout/header";
 @import "layout/footer";
 @import "layout/sidebar";
+
+@import "components/datatable.scss";
 
 @import "pages/shop"

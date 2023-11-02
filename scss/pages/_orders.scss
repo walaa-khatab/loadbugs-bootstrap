@@ -1,0 +1,119 @@
+.filterBtn{
+    width: 250px;
+    @include flex(row,space-between,center);
+    color: white;
+    font-size: 18px;
+    background-color: $main-color;
+    @include bord-radius(5px);
+    padding-right: 20px;
+    svg{
+        width: 18px;
+    }
+    &:hover{
+        color: white;
+        svg{
+            width: 20px;
+        }
+    }
+    &[aria-expanded="true"]{
+        position: relative;
+        svg{
+            display: none;
+        }
+        &::after{
+                content: "_";
+                display: block;
+                width: 20px;
+                height: 20px;
+                color: white;
+                position: absolute;
+                right: 20px;
+                top: -2px;
+            }
+    }
+}
+.filterBody{
+    margin-block: 20px;
+    margin-inline-end: 20px;
+    border: 1px solid $main-color;
+    padding: 20px;
+    @include bord-radius(5px);
+    .applyFilter{
+        width: 100%;
+        height: 45px;
+        @include flex(row,center,center);
+        background-color: $main-color;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all .3s ease-out;
+        &:hover{
+            color: $main-color;
+            background-color: white;
+            border: 1px solid $main-color;
+        }
+    }
+    .form-floating {
+        input{
+            padding: 10px 10px 5px 10px;
+        }
+        label{
+            padding-top: 10px;
+        }
+    }
+    .form-select,.form-control{
+        height: 45px;
+        border-color: $text-color;
+    }
+}
+
+.order-export-add{
+    @include flex(row,space-between,center);
+    margin-right: 20px;
+    margin-block: 20px;
+    .export-group{
+        @include flex(row,center,center);
+        gap: 10px;
+        .btn-wz-icon{
+            border:1px solid $text-color;
+            color: text-color;
+            font-size: 14px;
+            font-weight: bold;
+            @include flex(row,space-between,center);
+            min-width: 200px;
+            svg{
+                width: 14px;
+                color: $main-color;
+                transition: all .5s ease-in-out;
+            }
+            &:hover{
+                border:2px solid $main-color;
+                color: $main-color;
+                svg{
+                    transform: rotate(360deg);
+                    color: #28a745;
+                }
+            }
+        }
+    }
+    .creatOrder{
+        background-color: $btn-color;
+        color: white;
+        min-width: 200px;
+        font-size: 16px;
+        font-weight: bold;
+        @include flex(row,space-between,center);
+        svg{
+            width: 18px;
+            height: 18px;
+        }
+        &:hover{
+            svg{
+                background-color: white;
+                color: $btn-color;
+                border-radius: 50%;
+                animation: pulse 1.5s;
+            }
+        }
+    }
+}

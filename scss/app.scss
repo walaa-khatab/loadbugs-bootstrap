@@ -9,7 +9,10 @@
 @import "layout/footer";
 @import "layout/sidebar";
 
-@import "components/datatable.scss";
+@import "components/datatable";
+@import "components/modal";
 
+// @import "pages/shop";
+@import "pages/dashboard";
+@import "pages/orders";
 @import "pages/shop";
-@import "pages/dashboard"

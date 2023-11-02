@@ -11,6 +11,7 @@ $(document).ready(function(){
     responsive: true,
     autoWidth:false,
     'columnDefs': [
+        { targets: 6, className:'statusTd' },
         { responsivePriority: 1, targets: 0 },
         { responsivePriority: 3, targets: -3 ,searchable: false,orderable: false,className: 'dt-body-center edit-action',},
         { responsivePriority: 4, targets: -2,searchable: false,orderable: false,className: 'dt-body-center print-action', },

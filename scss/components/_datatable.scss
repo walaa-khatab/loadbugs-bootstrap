@@ -63,6 +63,7 @@ div.dataTables_wrapper{
 
 table.dataTable {
     width: 100%;
+    margin-top: 10px;
     border: 2px solid $main-color;
     border-bottom: 2px solid $main-color!important;
     color: $dark-text;
@@ -85,7 +86,7 @@ table.dataTable {
                     svg{color: #28a745};
                 }
                 &.print-action{
-                    svg{color: $main-color;}
+                    svg{color: $btn-color;}
                 }
                 &.hist-action{
                     svg{color: $dark-text;}
@@ -99,6 +100,20 @@ table.dataTable {
                             transform: scale(1.05);
                         }
                     }
+                }
+                &.statusTd span{
+                    padding: 5px 10px;
+                    border-radius: 13px;
+                }
+            }
+            &.odd {
+                .statusTd span{
+                    background-color: $btn-color;
+                }
+            }
+            &.even {
+                .statusTd span{
+                    background-color: $text-color;
                 }
             }
             &.odd>*,

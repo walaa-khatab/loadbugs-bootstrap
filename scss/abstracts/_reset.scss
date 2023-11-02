@@ -5,7 +5,8 @@ body{
 button,
 button:focus,
 button:focus-visible,
-input:focus-visible{
+input:focus-visible,
+.form-control:focus{
     outline: 0!important;
     box-shadow: none!important;
 }

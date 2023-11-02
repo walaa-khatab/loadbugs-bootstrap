@@ -76,6 +76,10 @@
         right: 0px;
         position: absolute;
       }
+      [class*=owl-]:hover{
+        background: transparent !important;
+        color:#4579f3
+      }
     }
   }
   .owl-dots {
@@ -141,6 +145,8 @@
          border: 0px solid;
          border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
     .add-to-cart{

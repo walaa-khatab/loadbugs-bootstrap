@@ -1,3 +1,18 @@
 $main-color:#2b4cb0;
 $text-color:#99a1b5;
 $dark-text:#313439;
+$btn-color:#f8ac2d;
+
+@keyframes pulse {
+  0% {
+    transform: scale(.85);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(#c8c8c8, 0);
+  }
+    100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(#c8c8c8, 0);
+  }
+}

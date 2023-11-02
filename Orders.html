@@ -272,6 +272,91 @@
             </div>
           </div>
           <div class="col py-3">
+              <!--  start filter  -->
+              <div class="row">
+                <div class="col-12">
+              
+                  <button class="btn filterBtn" type="button" data-bs-toggle="collapse" data-bs-target="#alloptions" aria-expanded="false" aria-controls="alloptions">
+                    Filter options 
+                    <i data-feather="filter"></i>
+                  </button>
+
+                  <div class="collapse" id="alloptions">
+                    <div class="filterBody">
+                      <div class="row">
+                        <div class=" col-lg-4 col-md-6 col mb-2">
+                            <select class="form-select " aria-label="example">
+                              <option selected>Choose status</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class=" col-lg-4 col-md-6 col mb-2">
+                            <select class="form-select " aria-label="example">
+                              <option selected>Choose City</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class=" col-lg-4 col-md-6 col mb-2">
+                            <select class="form-select " aria-label="example">
+                              <option selected>Choose District</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class=" col-lg-4 col-md-6 col">
+                          <div class="form-floating ">
+                            <input type="text" class="form-control" id="phone" placeholder="0100000000">
+                            <label for="phone">Phone number</label>
+                          </div>
+                        </div>
+                        <div class=" col-lg-4 col-md-6 col">
+                          <div class="form-floating ">
+                            <input type="text" class="form-control" id="awbInput" placeholder="AwB Example">
+                            <label for="awbInput">AWB</label>
+                          </div>
+                        </div>
+                        <div class=" col-lg-4 col-md-6 col">
+                          <button type="button" class="btn applyFilter">Apply</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+                <div class="col-12">
+                  <div class="order-export-add">
+                    <div class="export-group">
+                        <button type="button" class="btn btn-wz-icon">
+                        Download Sample
+                      <i data-feather="download"></i>
+                    </button>
+                    <button type="button" class="btn btn-wz-icon" data-bs-toggle="modal" data-bs-target="#importFile">
+                        Import Orders
+                      <i data-feather="upload"></i>
+                    </button>
+                    <button type="button" class="btn btn-wz-icon" data-bs-toggle="modal" data-bs-target="#importFile">
+                      Import Orders SCV
+                      <i data-feather="upload"></i>
+                    </button>
+                    </div>
+                    <button type="button " class="btn creatOrder">
+                      Create Order
+                      <i data-feather="plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+              <!--   end filter   -->
+
                 <!-- datatable -->
           <div class="row w-100">
             <div class="col-12"> 
@@ -302,7 +387,7 @@
                               <td>Name example</td>
                               <td>Phone example</td>
                               <td>Address example</td>
-                              <td>Status example</td>
+                              <td><span>Status Example</span></td>
                               <td>Amount example</td>
                               <td>City example</td>
                               <td>District example</td>
@@ -318,7 +403,7 @@
                               <td>Name example</td>
                               <td>Phone example</td>
                               <td>Address example</td>
-                              <td>Status example</td>
+                              <td><span>Status Example</span></td>
                               <td>Amount example</td>
                               <td>City example</td>
                               <td>District example</td>
@@ -334,7 +419,7 @@
                               <td>Name example</td>
                               <td>Phone example</td>
                               <td>Address example</td>
-                              <td>Status example</td>
+                              <td><span>Status Example</span></td>
                               <td>Amount example</td>
                               <td>City example</td>
                               <td>District example</td>
@@ -350,7 +435,7 @@
                               <td>Name example</td>
                               <td>Phone example</td>
                               <td>Address example</td>
-                              <td>Status example</td>
+                              <td><span>Status Example</span></td>
                               <td>Amount example</td>
                               <td>City example</td>
                               <td>District example</td>
@@ -366,7 +451,7 @@
                               <td>Name example</td>
                               <td>Phone example</td>
                               <td>Address example</td>
-                              <td>Status example</td>
+                              <td><span>Status Example</span></td>
                               <td>Amount example</td>
                               <td>City example</td>
                               <td>District example</td>
@@ -382,7 +467,7 @@
                               <td>Name example</td>
                               <td>Phone example</td>
                               <td>Address example</td>
-                              <td>Status example</td>
+                              <td><span class="status-td">Status Example</span></td>
                               <td>Amount example</td>
                               <td>City example</td>
                               <td>District example</td>
@@ -398,7 +483,7 @@
                               <td>Name example</td>
                               <td>Phone example</td>
                               <td>Address example</td>
-                              <td>Status example</td>
+                              <td><span>Status Example</span></td>
                               <td>Amount example</td>
                               <td>City example</td>
                               <td>District example</td>
@@ -414,7 +499,7 @@
                               <td>Name example</td>
                               <td>Phone example</td>
                               <td>Address example</td>
-                              <td>Status example</td>
+                              <td><span>Status Example</span></td>
                               <td>Amount example</td>
                               <td>City example</td>
                               <td>District example</td>
@@ -430,7 +515,7 @@
                               <td>Name example</td>
                               <td>Phone example</td>
                               <td>Address example</td>
-                              <td>Status example</td>
+                              <td><span>Status Example</span></td>
                               <td>Amount example</td>
                               <td>City example</td>
                               <td>District example</td>
@@ -446,7 +531,7 @@
                               <td>Name example</td>
                               <td>Phone example</td>
                               <td>Address example</td>
-                              <td>Status example</td>
+                              <td><span>Status Example</span></td>
                               <td>Amount example</td>
                               <td>City example</td>
                               <td>District example</td>
@@ -462,7 +547,7 @@
                               <td>Name example</td>
                               <td>Phone example</td>
                               <td>Address example</td>
-                              <td>Status example</td>
+                              <td><span>Status Example</span></td>
                               <td>Amount example</td>
                               <td>City example</td>
                               <td>District example</td>
@@ -478,7 +563,7 @@
                               <td>Name example</td>
                               <td>Phone example</td>
                               <td>Address example</td>
-                              <td>Status example</td>
+                              <td><span>Status Example</span></td>
                               <td>Amount example</td>
                               <td>City example</td>
                               <td>District example</td>
@@ -499,6 +584,32 @@
       </div>
       <!----end of container fluid----->
     </div>
+
+    <!-- Modaaal -->
+  <div class="modal fade custom-modal" id="importFile" tabindex="-1" aria-labelledby="importLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="importLabel">Import Orders</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+          <div class="input-group">
+            <input type="file" class="form-control" id="uploadFile" aria-describedby="uploadFileAddon" aria-label="Upload">
+            <button class="btn upload-btn-icon" type="button" id="uploadFileAddon">
+              <i data-feather="upload"></i>
+            </button>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-save">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-----------scripts------------>
     <script src="js/jquery.min.js"></script>
 

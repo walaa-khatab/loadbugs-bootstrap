@@ -11,26 +11,148 @@
     img {
       max-width: 100%;
     }
-    
   }
   .product-name {
-    padding:  10px 10px 0px 10px ;
-    text-align:center;
-      a {
-        text-align: center;
-        color: #f8ac2d;
-        text-decoration: none;
-        font-weight: 600;
-        
+    padding: 10px 10px 0px 10px;
+    text-align: center;
+    a {
+      text-align: center;
+      color: #f8ac2d;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+  .product-price {
+    font-size: 13px;
+    text-align: center;
+    color: $text-color;
+    font-weight: 500;
+    // padding-top:5px;
+    padding-bottom: 20px;
+  }
+}
+
+// product details
+.card{
+    padding: 10px;
+    box-shadow: -3px 0px 13px 1px rgba(165, 164, 164, 0.137);
+    border: 0px solid;
+    border-radius: 15px;
+    .left-part {
+  .owl-carousel {
+    .item {
+      width: 100%;
+      background-color: antiquewhite;
+      border-radius: 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      img {
+        max-width: 100%;
+        max-height: 300px;
       }
     }
-    .product-price{
-        font-size: 13px;
-        text-align: center;
-        color:$text-color;
-        font-weight: 500;
-        // padding-top:5px;
-        padding-bottom: 20px;
+    .owl-stage {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-box;
+      display: box;
+      max-width: 400px !important;
+      box-shadow: -3px 0px 13px 1px rgba(165, 164, 164, 0.178);
     }
-  
+
+    .owl-item {
+      display: inline !important;
+    }
+    .owl-nav {
+      position: relative;
+      color: #4579f3;
+      font-size: 17px;
+      .owl-prev {
+        left: 0px;
+        position: absolute;
+      }
+      .owl-next {
+        right: 0px;
+        position: absolute;
+      }
+    }
+  }
+  .owl-dots {
+    margin-top: 22px;
+    .owl-dot {
+      span {
+        width: 8px;
+        height: 8px;
+        margin: 5px 4px;
+      }
+      &.active {
+        span {
+          background: #4579f3 !important ;
+        }
+      }
+    }
+  }
+}
+// right part
+.right-part {
+  .inStock {
+    display: flex;
+    background-color: #40c77e;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1px 7px;
+    width: fit-content;
+    font-size: 11px;
+  }
+  .product-name,
+  .price {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+  }
+  .main-btn {
+    background-color: #0e49cc;
+    color: #fff;
+    font-size: 14px;
+    width: 49%;
+    padding: 10px;
+  }
+  .middel-section {
+    .quantity {
+      flex-wrap: nowrap;
+      border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        max-width: 48%;
+       box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.377);
+      span {
+        background-color: #0e49cc;
+        padding:15px ;
+        color:#fff;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        font-size: 11px;
+        font-weight: 600;
+      }
+      input{
+         border: 0px solid;
+         border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+    .add-to-cart{
+        color:#fff;
+        background-color: #1b98f5;
+        width: 49%;
+        font-size: 12px;
+        svg{
+            font-size: 12px;
+            padding-right: 5px;
+        }
+    }
+  }
+}
 }

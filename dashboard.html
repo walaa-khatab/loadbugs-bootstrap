@@ -7,6 +7,7 @@
     <!------faveicons------->
     <link rel="icon" type="image/x-icon" href="images/fav.png" />
     <link rel="apple-touch-icon" href="images/fav.png" />
+
     <!----------Styles------------->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 
@@ -268,31 +269,80 @@
             </div>
           </div>
           <div class="col py-3">
-            <div class="row">
+            <!-- dashboard contents -->
+            <div class="dashboard-contents">
+                <div class="row d-flex justify-content-between align-items-center">
                 <div class="col-md-4">
-                    <div class="left-part">
+                    <div class="left-part d-flex justify-content-between align-items-center">
                     <div class="box-data">
-                        <span>Stelled</span>
-                        <span>0 EGP</span>
+                        <p>Stelled</p>
+                        <p class="price">0 EGP</p>
                     </div>
                     <div class="box-data">
-                        <span>Balance</span>
-                        <span>0 EGP</span>
+                        <p>Balance</p>
+                        <p class="price">0 EGP</p>
                     </div>
                 </div>
                 </div>
-                <div class="col-md-8">
-                    <div class="right-part">
+                <div class="col-md-7">
+                    <div class="right-part  d-flex justify-content-between flex-wrap">
+                        <!-- box1 -->
                         <div class="box-info">
-                            <i data-feather="users"></i>
+                            <i class="blue" data-feather="users"></i>
                             <div class="number">0</div>
-                            <div class="percet">
+                            <div class="percent green">
                                 100%
+                            </div>
+                            <div class="type">All</div>
+                        </div>
+                        <!-- box2  -->
+                        <div class="box-info">
+                            <i class="yellow" data-feather="package"></i>
+                            <div class="number">0</div>
+                            <div class="percent green">
+                                100%
+                            </div>
+                            <div class="type">All</div>
+                        </div>
+                        <!-- box3  -->
+                        <div class="box-info">
+                            <i class="blue" data-feather="package"></i>
+                            <div class="number">0</div>
+                            <div class="percent green">
+                                100%
+                            </div>
+                            <div class="type">All</div>
+                        </div>
+                        <!-- box4 -->
+                        <div class="box-info">
+                            <i class="red" data-feather="bar-chart"></i>
+                            <div class="number">0</div>
+                            <div class="percent green">
+                                100%
+                            </div>
+                            <div class="type">All</div>
+                        </div>
+                        <!-- box4 -->
+                        <div class="box-info">
+                            <i class="green" data-feather="refresh-cw"></i>
+                            <div class="number">0</div>
+                            <div class="percent green">
+                                100%
+                            </div>
+                            <div class="type">All</div>
+                        </div>
+                        <!-- box4 -->
+                        <div class="box-info">
+                            <i class="green" data-feather="refresh-cw"></i>
+                            <div class="number">0</div>
+                            <div class="percent red">
+                                NAN%
                             </div>
                             <div class="type">All</div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
         </div>
@@ -312,6 +362,8 @@
 
     <!------------feather icons---------->
     <script src="js/feather.min.js"></script>
+    
+  
 
     <script src="js/main.js"></script>
     <!------------------------------>

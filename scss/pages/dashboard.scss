@@ -1,0 +1,68 @@
+.dashboard-contents {
+  .left-part {
+    .box-data {
+      background-color: #204cb5;
+      padding: 15px 15px 0px;
+      color: #fff;
+      border-radius: 10px;
+      width: auto;
+      font-size: 18px;
+      .price {
+        font-size: 20px;
+      }
+    }
+  }
+  .right-part {
+    background-color: #fff;
+    box-shadow: -3px 0px 13px 1px rgba(165, 164, 164, 0.178);
+    border-radius: 10px;
+    
+    .box-info {
+      text-align: center;
+      width: 100px;
+      border-right: 1px solid #ddd;
+      padding: 20px 10px;
+      svg {
+        border-radius: 50%;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        &.blue {
+          color: #528dbd;
+          background-color: #e7f4fd;
+        }
+        &.yellow {
+            background-color: #fff5e4;
+            color:#fece3d;
+        }
+        &.red {
+            background-color: #fdf3f4;
+            color:#b64d68;
+        }
+        &.green {
+            background-color: #edfaf4;
+            color:#65bc92;
+        }
+       
+      }
+      .number {
+        font-weight: 500;
+        font-size: 20px;
+        padding-top: 10px;
+      }
+      .percent{
+        font-size: 11px;
+        &.green{
+            color:#4c9967;
+        }
+        &.red{
+            color:#c7353f;
+        }
+      }
+      .type{
+        font-size:13px;
+        color:#918e8e
+      }
+    }
+  }
+}

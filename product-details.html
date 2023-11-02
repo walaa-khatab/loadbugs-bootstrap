@@ -7,12 +7,22 @@
     <!------faveicons------->
     <link rel="icon" type="image/x-icon" href="images/fav.png" />
     <link rel="apple-touch-icon" href="images/fav.png" />
+    <!-- carsoul -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <!----------Styles------------->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 
     <link rel="stylesheet" href="css/daterangepicker.css" />
 
     <link rel="stylesheet" href="css/app.css" />
+
     <!----------------------------->
   </head>
 
@@ -65,7 +75,7 @@
         </div>
       </header>
       <!-- body -->
-      <div class="content-body ">
+      <div class="content-body">
         <div class="row flex-nowrap h-100">
           <div class="col-auto col-md-4 col-xl-2 px-sm-2 px-0 my-auto">
             <!-- sidebar -->
@@ -268,8 +278,58 @@
             </div>
           </div>
           <div class="col py-3">
-           content
-
+            <div class="card">
+              <div class="row d-flex justify-content-between">
+              <div class="col-md-5">
+                <div class="left-part">
+                  <div class="owl-carousel owl-theme">
+                    <div class="item">
+                      <img src="./images/Mockup5.2105a159.png" />
+                    </div>
+                    <div class="item">
+                      <img src="./images/dlvago.png" />
+                    </div>
+                    <div class="item">
+                      <img src="./images/fav.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="right-part">
+                  <!-- in stock take class inStoke out stock take outStoke -->
+                  <div class="inStock">
+                    <span>In Stock</span>
+                  </div>
+                  <div class="product-name">
+                    <p>Product Name</p>
+                  </div>
+                  <div class="price">
+                    <p>200 EGP</p>
+                  </div>
+                  <hr />
+                  <div class="middel-section d-flex justify-content-between">
+                    <div class="quantity d-flex ">
+                      <span>Qty</span>
+                      <input type="number" />
+                    </div>
+                    <button class="btn add-to-cart">
+                      <i data-feather="shopping-cart"></i>
+                      <span>
+                        Add To Cart
+                      </span>
+                    </button>
+                  </div>
+                  <hr />
+                  <!-- buttons -->
+                  <div class="d-flex justify-content-between pt-2">
+                    <button class="btn main-btn">Add To Balance</button>
+                    <button class="btn main-btn">Cash on Delivary</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
       </div>
@@ -288,6 +348,10 @@
 
     <!------------feather icons---------->
     <script src="js/feather.min.js"></script>
+
+    <!-- carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script src="js/main.js"></script>
     <!------------------------------>

@@ -125,9 +125,9 @@ div.dt-buttons{
 div.dt-buttons>.dt-button,
  div.dt-buttons>div.dt-button-split .dt-button{
     border: 0;
-    border-top:1px solid rgba(43 76 176 / 16%);
+    border-top:1px solid rgba(43, 76 ,176 , 0.16);
     background: white!important;
-    box-shadow: 0 2px 4px rgba(43 76 176 / 16%)!important;
+    box-shadow: 0 2px 4px rgba(43, 76 ,176 , 0.16)!important;
     margin-inline: 5px;
     svg{
         stroke: $main-color;
@@ -135,6 +135,6 @@ div.dt-buttons>.dt-button,
         height: 16px;
     }
     &:hover{
-        border:1px solid rgba(43 76 176 / 50%)!important;
+        border:1px solid rgba(43 ,76 ,176 , 0.5)!important;
     }
  }

@@ -1,0 +1,38 @@
+    .form-floating {
+        input{
+            padding: 12px 10px 5px 10px!important;
+        }
+        label{
+            padding-top: 10px!important;
+            @include flex(row,center,center);
+            gap: 8px;
+            svg{
+                width: 16px;
+                color: $main-color;
+            }
+        }
+    }
+    .form-select,input.form-control{
+        height: 48px!important;
+        border-color: $text-color!important;
+    }
+
+    .select-wz-label{
+        position: relative;
+        span.label{
+            position: absolute;
+            left: 0;
+            top: 0;
+            min-width: 80px;
+            height: 48px;
+            background-color: $main-color;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            @include bord_radius(5px 0 0 5px);
+            @include flex(row,center,center)
+        }
+        select{
+            padding-inline-start: 85px;
+        }
+    }

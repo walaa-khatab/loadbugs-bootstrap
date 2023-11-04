@@ -53,18 +53,6 @@
             border: 1px solid $main-color;
         }
     }
-    .form-floating {
-        input{
-            padding: 10px 10px 5px 10px;
-        }
-        label{
-            padding-top: 10px;
-        }
-    }
-    .form-select,.form-control{
-        height: 45px;
-        border-color: $text-color;
-    }
 }
 
 .order-export-add{

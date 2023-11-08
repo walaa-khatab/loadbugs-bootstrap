@@ -30,9 +30,105 @@
         </div>
 
         <div class="header-right">
-          <button type="button" class="btn cart-icon">
-            <i data-feather="shopping-cart"></i>
-          </button>
+
+          <div class="cart">
+          
+              <button type="button" class="btn cart-icon" id="openCart">
+                <i data-feather="shopping-cart"></i>
+              </button>
+            
+          <!-- Cart dropdown -->
+            <div class="cart-dropdown d-none">
+              <div class="cart-header">
+                Cart Items
+                <button type="button" class="btn cart-icon" id="closeCart">
+                  <i data-feather="minimize"></i>
+                </button>
+              </div>
+               <div class="cart-drop-header">
+                  <div class="cart-num">
+                    <i data-feather="shopping-cart"></i>
+                    <span>2</span>
+                  </div>
+                  <div class="cart-total">
+                    Total : <span class="total"> 1200 $</span>
+                  </div>
+               </div>
+
+               <div class="cart-body">
+                <div class="cart-item" id="item-1">
+
+                  <div class="item-img">
+                    <img src="/images/Mockup5.2105a159.png" alt="" width="100px">
+                  </div>
+
+                  <div class="item-info">
+                    <div class="item-title">Product Example</div>
+                    <span class="item-price">200$</span>
+                  </div>
+
+                  <div class="quant-btns">
+                    Quantity:
+                    <div class="qty-container">
+                      <button class="qty-btn-minus btn-light btn" type="button"><i data-feather="minus"></i></button>
+                      <input type="text" name="qty" value="0" class="input-qty"/>
+                      <button class="qty-btn-plus btn-light btn" type="button"><i data-feather="plus"></i></button>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="cart-item" id="item-1">
+
+                  <div class="item-img">
+                    <img src="/images/Mockup5.2105a159.png" alt="" width="100px">
+                  </div>
+
+                  <div class="item-info">
+                    <div class="item-title">Product Example</div>
+                    <span class="item-price">200$</span>
+                  </div>
+
+                  <div class="quant-btns">
+                    Quantity:
+                    <div class="qty-container">
+                      <button class="qty-btn-minus btn-light btn" type="button"><i data-feather="minus"></i></button>
+                      <input type="text" name="qty" value="0" class="input-qty"/>
+                      <button class="qty-btn-plus btn-light btn" type="button"><i data-feather="plus"></i></button>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="cart-item" id="item-1">
+
+                  <div class="item-img">
+                    <img src="/images/Mockup5.2105a159.png" alt="" width="100px">
+                  </div>
+
+                  <div class="item-info">
+                    <div class="item-title">Product Example</div>
+                    <span class="item-price">200$</span>
+                  </div>
+
+                  <div class="quant-btns">
+                    Quantity:
+                    <div class="qty-container">
+                      <button class="qty-btn-minus btn-light btn" type="button"><i data-feather="minus"></i></button>
+                      <input type="text" name="qty" value="0" class="input-qty"/>
+                      <button class="qty-btn-plus btn-light btn" type="button"><i data-feather="plus"></i></button>
+                    </div>
+                  </div>
+
+                </div> 
+               </div>
+
+                <button class="btn checkout-btn">Checkout</button>
+
+            </div>
+          <!-- end cartdropdown -->
+          </div>
+
           <span class="separator"></span>
           <div class="profile">
             <div class="dropdown">

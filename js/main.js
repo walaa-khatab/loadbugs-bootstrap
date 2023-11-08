@@ -5,6 +5,38 @@ $(document).ready(function () {
     /*------datarangepicker init----*/
     $('input[name="daterange"]').daterangepicker();
 
+    /*------------Toggle Cart Drop Down ------------*/
+
+    $(document).on('click','#openCart',function () {
+        $('.cart-dropdown').removeClass('d-none');
+        $('body').addClass('overlay', {duration:400});
+    })
+
+    $(document).on('click','#closeCart',function () {
+        $('.cart-dropdown').addClass('d-none');
+        $('body').removeClass('overlay', {duration:400});
+    })
+    /*------------Quantity ------------*/
+    var buttonPlus  = $(".qty-btn-plus");
+    var buttonMinus = $(".qty-btn-minus");
+
+    var incrementPlus = buttonPlus.click(function() {
+    var $n = $(this)
+    .parent(".qty-container")
+    .find(".input-qty");
+    $n.val(Number($n.val())+1 );
+    });
+
+    var incrementMinus = buttonMinus.click(function() {
+    var $n = $(this)
+    .parent(".qty-container")
+    .find(".input-qty");
+    var amount = Number($n.val());
+    if (amount > 0) {
+        $n.val(amount-1);
+    }
+    });
+
 
 });
 
@@ -43,3 +75,4 @@ $(document).ready(function () {
     carousel();
 
 })(jQuery);
+

@@ -37,6 +37,11 @@ $(document).ready(function () {
     }
     });
 
+    // ------------------View Token-------------- //
+
+     $(document).on('click','#ViewToken',function () {
+        $('.token').toggleClass('d-none');
+    })
 
 });
 

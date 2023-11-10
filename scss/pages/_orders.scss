@@ -59,12 +59,15 @@
     @include flex(row,space-between,center);
     margin-right: 20px;
     margin-block: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
     .export-group{
-        @include flex(row,center,center);
+        @include flex(row,start,center);
         gap: 10px;
+        flex-wrap: wrap;
         .btn-wz-icon{
             border:1px solid $text-color;
-            color: text-color;
+            color: $dark-text;
             font-size: 14px;
             font-weight: bold;
             @include flex(row,space-between,center);

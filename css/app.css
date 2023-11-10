@@ -195,6 +195,7 @@ select:focus-visible,
   padding: 0 15px;
   margin-top: auto;
   max-width: 240px;
+  margin-left: 5px;
 }
 .content-body .sidebar a,
 .content-body .sidebar .nav-link {
@@ -662,6 +663,12 @@ div.dt-buttons > div.dt-button-split .dt-button:hover {
     transform: rotateX(0deg);
   }
 }
+@media (max-width: 576px) {
+  .cart .cart-dropdown {
+    max-width: 100%;
+    width: 100%;
+  }
+}
 .dashboard-contents .left-part .box-data {
   background-color: #204cb5;
   padding: 15px 15px 0px;
@@ -802,17 +809,20 @@ div.dt-buttons > div.dt-button-split .dt-button:hover {
   flex-direction: row;
   margin-right: 20px;
   margin-block: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .order-export-add .export-group {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: row;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .order-export-add .export-group .btn-wz-icon {
   border: 1px solid #99a1b5;
-  color: text-color;
+  color: #313439;
   font-size: 14px;
   font-weight: bold;
   display: flex;
@@ -1081,6 +1091,52 @@ div.dt-buttons > div.dt-button-split .dt-button:hover {
 .card .right-part .middel-section .add-to-cart svg {
   font-size: 12px;
   padding-right: 5px;
+}
+
+.integration {
+  margin: 20px 20px 20px 0;
+}
+.integration .section-title {
+  color: #2b4cb0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.02);
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 10px;
+  width: 25%;
+}
+.integration .section-title .section-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #2b4cb0;
+  color: white;
+  margin-inline-end: 10px;
+}
+.integration .token {
+  margin-top: 20px;
+  border: 2px solid #2b4cb0;
+  padding: 20px;
+  width: 50%;
+  word-break: break-all;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  color: #313439;
+}
+
+@media (max-width: 576px) {
+  .token {
+    width: 100% !important;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -171,3 +171,12 @@
         transform: rotateX(0deg) 
     }
 }
+
+// Responsive ----------------------------------------------------
+
+@media (max-width:576px) {
+    .cart .cart-dropdown{
+        max-width: 100%;
+        width: 100%;
+    }
+}

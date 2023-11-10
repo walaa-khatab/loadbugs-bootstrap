@@ -81,4 +81,53 @@ $(document).ready(function(){
       }
    });
 
+   /****************Payment*****************/
+
+      var tableP = $('#datatablePayment').DataTable({
+    language: {
+        search: '<i data-feather="search"></i>',
+        "searchPlaceholder":"Search ...",
+        oPaginate: {
+            sNext: '<i data-feather="arrow-right-circle"></i>',
+            sPrevious: '<i data-feather="arrow-left-circle"></i>',
+        }
+    },
+    responsive: true,
+    autoWidth:false,
+    'columnDefs': [
+        { targets: 3, className:'statusTd' },
+        { responsivePriority: 1, targets: 0 }
+    ],
+    dom: 'Bfrtip',
+    buttons: [{
+                extend:    'copyHtml5',
+                text:      '<i data-feather="copy"></i>',
+                titleAttr: 'Copy'
+            },
+            {
+                extend:    'excelHtml5',
+                text:      '<i data-feather="file-text"></i>',
+                titleAttr: 'Excel'
+            },
+            {
+                extend:    'csvHtml5',
+                text:      '<i data-feather="file"></i>',
+                titleAttr: 'CSV'
+            },
+            {
+                extend:    'pdfHtml5',
+                text:      '<i data-feather="book-open"></i>',
+                titleAttr: 'PDF'
+            },
+            {
+                extend:    'print',
+                text:      '<i data-feather="printer"></i>',
+                titleAttr: 'Print'
+            }],
+    'order': [[0, 'asc']],
+    "drawCallback": function( settings ) {
+        feather.replace();
+    }
+   });
+
 });

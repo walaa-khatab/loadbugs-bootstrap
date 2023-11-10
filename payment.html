@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loadbugs</title>
+    <!------faveicons------->
+    <link rel="icon" type="image/x-icon" href="images/fav.png" />
+    <link rel="apple-touch-icon" href="images/fav.png" />
+    <!----------Styles------------->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/daterangepicker.css" />
+
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="css/responsive.dataTables.min.css">
+
+    <link rel="stylesheet" href="css/app.css" />
+    <!----------------------------->
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <div class="header-main-logo">
+            <img src="images/logo.png" alt="" />
+          </div>
+          <div class="header-logo">
+            <img src="images/dlvago.png" alt="" />
+          </div>
+        </div>
+
+        <div class="header-right">
+          <button type="button" class="btn cart-icon">
+            <i data-feather="shopping-cart"></i>
+          </button>
+          <span class="separator"></span>
+          <div class="profile">
+            <div class="dropdown">
+              <button
+                class="btn profile_button dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                User Name
+                <i data-feather="chevron-down"></i>
+              </button>
+              <div
+                class="dropdown-menu profile_drop"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <div>
+                  <a class="dropdown-item control" href="#">
+                    <button class="btn control-icon" type="button">
+                      <i data-feather="cpu"></i>
+                    </button>
+                    Control Panel</a
+                  >
+                </div>
+                <a class="dropdown-item sign-out" href="#">Sign out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- body -->
+      <div class="content-body">
+        <div class="row flex-nowrap h-100">
+          <div class="col-auto col-md-4 col-xl-2 px-sm-2 px-0 my-auto">
+            <!-- sidebar -->
+            <div class="sidebar py-5">
+              <div
+                class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white"
+              >
+                <ul
+                  class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                  id="menu"
+                >
+                  <li class="nav-item py-2">
+                    <a href="#" class="nav-link align-middle px-0 d-flex">
+                      <i data-feather="bell"></i>
+                      <span class="ms-1 d-none d-sm-inline">NOTIFICATIONS</span>
+                    </a>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a
+                      href="#submenu1"
+                      data-bs-toggle="collapse"
+                      class="nav-link px-0 align-middle collapsed"
+                    >
+                      <i data-feather="menu"></i>
+                      <span class="ms-1 d-none d-sm-inline">DASHBOSRDS</span>
+                    </a>
+                    <ul
+                      class="collapse flex-column ms-1"
+                      id="submenu1"
+                      data-bs-parent="#menu"
+                    >
+                      <li class="w-100">
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="activity"></i>
+                          <span class="d-none ms-2 d-sm-inline">Analytics</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item py-2">
+                    <a
+                      href="#submenu2"
+                      data-bs-toggle="collapse"
+                      class="nav-link px-0 align-middle"
+                    >
+                      <i data-feather="truck"></i>
+                      <span class="ms-1 d-none d-sm-inline">ORDERS</span></a
+                    >
+                    <ul
+                      class="collapse flex-column ms-1"
+                      id="submenu2"
+                      data-bs-parent="#menu"
+                    >
+                      <li class="w-100">
+                        <a href="Orders.html" class="nav-link px-0 d-flex">
+                          <i data-feather="truck"></i>
+                          <span class="d-none ms-2 d-sm-inline">All</span>
+                        </a>
+                      </li>
+                      <li class="w-100">
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="truck"></i>
+                          <span class="d-none ms-2 d-sm-inline">Returned</span>
+                        </a>
+                      </li>
+                      <li class="w-100">
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="truck"></i>
+                          <span class="d-none ms-2 d-sm-inline">Not Ready</span>
+                        </a>
+                      </li>
+                      <li class="w-100">
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="truck"></i>
+                          <span class="d-none ms-2 d-sm-inline">Pickups</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a
+                      href="#submenu3"
+                      data-bs-toggle="collapse"
+                      class="nav-link px-0 align-middle"
+                    >
+                      <i data-feather="credit-card"></i>
+                      <span class="ms-1 d-none d-sm-inline">BALANCE</span>
+                    </a>
+                    <ul
+                      class="collapse flex-column ms-1"
+                      id="submenu3"
+                      data-bs-parent="#menu"
+                    >
+                      <li class="w-100">
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="credit-card"></i>
+                          <span class="d-none ms-2 d-sm-inline">Settled</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="credit-card"></i>
+                          <span class="d-none ms-2 d-sm-inline">Collected</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="credit-card"></i>
+                          <span class="d-none ms-2 d-sm-inline">Delivred</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="credit-card"></i>
+                          <span class="d-none ms-2 d-sm-inline">WIP</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="credit-card"></i>
+                          <span class="d-none ms-2 d-sm-inline">Paymentes</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a
+                      href="#submenu4"
+                      data-bs-toggle="collapse"
+                      class="nav-link px-0 align-middle"
+                    >
+                      <i data-feather="user"></i>
+                      <span class="ms-1 d-none d-sm-inline">Account</span>
+                    </a>
+                    <ul
+                      class="collapse flex-column ms-1"
+                      id="submenu4"
+                      data-bs-parent="#menu"
+                    >
+                      <li class="w-100">
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="map-pin"></i>
+                          <span class="d-none ms-2 d-sm-inline">Address</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="user"></i>
+                          <span class="d-none ms-2 d-sm-inline">Details</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="lock"></i>
+                          <span class="d-none ms-2 d-sm-inline">Psssword</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a
+                      href="#submenu5"
+                      data-bs-toggle="collapse"
+                      class="nav-link px-0 align-middle"
+                    >
+                      <i data-feather="shopping-bag"></i>
+                      <span class="ms-1 d-none d-sm-inline">INTEGRATIONS</span>
+                    </a>
+                    <ul
+                      class="collapse flex-column ms-1"
+                      id="submenu5"
+                      data-bs-parent="#menu"
+                    >
+                      <li class="w-100">
+                        <a
+                          href="https://apps.shopify.com/"
+                          class="nav-link px-0 d-flex"
+                        >
+                          <i data-feather="shopping-bag"></i>
+                          <span class="d-none ms-2 d-sm-inline">Shopify</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="code"></i>
+                          <span class="d-none ms-2 d-sm-inline">API</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a href="./shop.html" class="nav-link px-0 align-middle">
+                      <i data-feather="shopping-cart"></i>
+                      <span class="ms-1 d-none d-sm-inline">SHOP</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col py-3">
+              <!--  start filter  -->
+              <div class="row">
+                <div class="col-12">
+              
+                  <button class="btn filterBtn" type="button" data-bs-toggle="collapse" data-bs-target="#alloptions" aria-expanded="true" aria-controls="alloptions">
+                    Filter options 
+                    <i data-feather="filter"></i>
+                  </button>
+
+                  <div class="collapse show" id="alloptions">
+                    <div class="filterBody">
+                      <div class="row">
+                     
+                      
+                        <div class=" col-lg-4 col-md-6 col-12 mb-2">
+                          <div class="form-floating ">
+                            <input type="Date" class="form-control" id="dateFrom" placeholder="0100000000">
+                            <label for="dateFrom">From</label>
+                          </div>
+                        </div>
+                        <div class=" col-lg-4 col-md-6 col-12 mb-2">
+                          <div class="form-floating ">
+                            <input type="date" class="form-control" id="dateTo" placeholder="AwB Example">
+                            <label for="dateTo">To</label>
+                          </div>
+                        </div>
+                        <div class=" col-lg-4 col-md-6 col-12 mb-2">
+                          <button type="button" class="btn applyFilter">Apply</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+              </div>
+              <!--   end filter   -->
+
+                <!-- datatable -->
+          <div class="row w-100">
+            <div class="col-12"> 
+              <table id="datatablePayment" class="display nowrap custom-datatable" >
+                      <thead>
+                          <tr> 
+                              <th># </th>
+                              <th>AWB</th>
+                              <th>Company Name</th>
+                              <th>Status</th>
+                              <th>Total Amount</th>
+                              <th>Ship Fees</th>
+                              <th>Company Ammount</th>
+                              <th>Operation Date</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr> 
+                            <td>#1 </td>                        
+                            <td>AWB 1</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                            <tr> 
+                            <td>#1 </td>                        
+                            <td>AWB 1</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                            <tr> 
+                            <td>#2 </td>                        
+                            <td>AWB 2</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                            <tr> 
+                            <td>#3 </td>                        
+                            <td>AWB 3</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                            <tr> 
+                            <td>#4 </td>                        
+                            <td>AWB 4</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                            <tr> 
+                            <td>#5 </td>                        
+                            <td>AWB 5</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                            <tr> 
+                            <td>#6 </td>                        
+                            <td>AWB 6</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                        <tr> 
+                            <td>#7 </td>                        
+                            <td>AWB 7</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                        <tr> 
+                            <td>#8 </td>                        
+                            <td>AWB 8</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                        <tr> 
+                            <td>#9 </td>                        
+                            <td>AWB 9</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                        <tr> 
+                            <td>#10 </td>                        
+                            <td>AWB 10</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                        <tr> 
+                            <td>#11 </td>                        
+                            <td>AWB 11</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                    </tbody>
+                  
+              </table>
+            </div>
+          </div>  
+
+                <!-- datatable -->
+   </div>
+        </div>
+      </div>
+      <!----end of container fluid----->
+    </div>
+
+    <!-- Modaaal -->
+  <div class="modal fade custom-modal" id="importFile" tabindex="-1" aria-labelledby="importLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="importLabel">Import Orders</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+          <div class="input-group">
+            <input type="file" class="form-control" id="uploadFile" aria-describedby="uploadFileAddon" aria-label="Upload">
+            <button class="btn upload-btn-icon" type="button" id="uploadFileAddon">
+              <i data-feather="upload"></i>
+            </button>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-save">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-----------scripts------------>
+    <script src="js/jquery.min.js"></script>
+
+    <!---------bootstrap--------->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!---------daterangepicker--------->
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.min.js"></script>
+
+    <!------------feather icons---------->
+    <script src="js/feather.min.js"></script>
+
+    <!--------Datatable-------->
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.buttons.min.js"></script>
+    <script src="js/jszip.min.js"></script>
+    <script src="js/pdfmake.min.js"></script>
+    <script src="js/vfs_fonts.js"></script>
+    <script src="js/buttons.html5.min.js"></script>
+    <script src="js/buttons.print.min.js"></script>
+    <script src="js/dataTables.responsive.min.js"></script>
+    <script src="js/customDatatable.js"></script>
+
+    <script src="js/main.js"></script>
+    <!------------------------------>
+  </body>
+</html>

@@ -12,6 +12,10 @@
 
     <link rel="stylesheet" href="css/daterangepicker.css" />
 
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="css/responsive.dataTables.min.css">
+
     <link rel="stylesheet" href="css/app.css" />
     <!----------------------------->
   </head>
@@ -30,105 +34,9 @@
         </div>
 
         <div class="header-right">
-
-          <div class="cart">
-          
-              <button type="button" class="btn cart-icon" id="openCart">
-                <i data-feather="shopping-cart"></i>
-              </button>
-            
-          <!-- Cart dropdown -->
-            <div class="cart-dropdown d-none">
-              <div class="cart-header">
-                Cart Items
-                <button type="button" class="btn cart-icon" id="closeCart">
-                  <i data-feather="minimize"></i>
-                </button>
-              </div>
-               <div class="cart-drop-header">
-                  <div class="cart-num">
-                    <i data-feather="shopping-cart"></i>
-                    <span>2</span>
-                  </div>
-                  <div class="cart-total">
-                    Total : <span class="total"> 1200 $</span>
-                  </div>
-               </div>
-
-               <div class="cart-body">
-                <div class="cart-item" id="item-1">
-
-                  <div class="item-img">
-                    <img src="images/Mockup5.2105a159.png" alt="" width="100px">
-                  </div>
-
-                  <div class="item-info">
-                    <div class="item-title">Product Example</div>
-                    <span class="item-price">200$</span>
-                  </div>
-
-                  <div class="quant-btns">
-                    Quantity:
-                    <div class="qty-container">
-                      <button class="qty-btn-minus btn-light btn" type="button"><i data-feather="minus"></i></button>
-                      <input type="text" name="qty" value="0" class="input-qty"/>
-                      <button class="qty-btn-plus btn-light btn" type="button"><i data-feather="plus"></i></button>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="cart-item" id="item-1">
-
-                  <div class="item-img">
-                    <img src="images/Mockup5.2105a159.png" alt="" width="100px">
-                  </div>
-
-                  <div class="item-info">
-                    <div class="item-title">Product Example</div>
-                    <span class="item-price">200$</span>
-                  </div>
-
-                  <div class="quant-btns">
-                    Quantity:
-                    <div class="qty-container">
-                      <button class="qty-btn-minus btn-light btn" type="button"><i data-feather="minus"></i></button>
-                      <input type="text" name="qty" value="0" class="input-qty"/>
-                      <button class="qty-btn-plus btn-light btn" type="button"><i data-feather="plus"></i></button>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="cart-item" id="item-1">
-
-                  <div class="item-img">
-                    <img src="images/Mockup5.2105a159.png" alt="" width="100px">
-                  </div>
-
-                  <div class="item-info">
-                    <div class="item-title">Product Example</div>
-                    <span class="item-price">200$</span>
-                  </div>
-
-                  <div class="quant-btns">
-                    Quantity:
-                    <div class="qty-container">
-                      <button class="qty-btn-minus btn-light btn" type="button"><i data-feather="minus"></i></button>
-                      <input type="text" name="qty" value="0" class="input-qty"/>
-                      <button class="qty-btn-plus btn-light btn" type="button"><i data-feather="plus"></i></button>
-                    </div>
-                  </div>
-
-                </div> 
-               </div>
-
-                <button class="btn checkout-btn">Checkout</button>
-
-            </div>
-          <!-- end cartdropdown -->
-          </div>
-
+          <button type="button" class="btn cart-icon">
+            <i data-feather="shopping-cart"></i>
+          </button>
           <span class="separator"></span>
           <div class="profile">
             <div class="dropdown">
@@ -194,7 +102,7 @@
                       data-bs-parent="#menu"
                     >
                       <li class="w-100">
-                        <a href="dashboard.html" class="nav-link px-0 d-flex">
+                        <a href="#" class="nav-link px-0 d-flex">
                           <i data-feather="activity"></i>
                           <span class="d-none ms-2 d-sm-inline">Analytics</span>
                         </a>
@@ -217,7 +125,7 @@
                       data-bs-parent="#menu"
                     >
                       <li class="w-100">
-                        <a href="orders.html" class="nav-link px-0 d-flex">
+                        <a href="Orders.html" class="nav-link px-0 d-flex">
                           <i data-feather="truck"></i>
                           <span class="d-none ms-2 d-sm-inline">All</span>
                         </a>
@@ -281,7 +189,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="payment.html" class="nav-link px-0 d-flex">
+                        <a href="#" class="nav-link px-0 d-flex">
                           <i data-feather="credit-card"></i>
                           <span class="d-none ms-2 d-sm-inline">Paymentes</span>
                         </a>
@@ -354,7 +262,7 @@
                     </ul>
                   </li>
                   <li class="nav-item py-2">
-                    <a href="shop.html" class="nav-link px-0 align-middle">
+                    <a href="./shop.html" class="nav-link px-0 align-middle">
                       <i data-feather="shopping-cart"></i>
                       <span class="ms-1 d-none d-sm-inline">SHOP</span>
                     </a>
@@ -364,16 +272,221 @@
             </div>
           </div>
           <div class="col py-3">
-            <div class="text-center  m-5">
-                <h2>The cart list shows here</h2>
-                <br>
-                Sidebar Main pages linked
+              <!--  start filter  -->
+              <div class="row">
+                <div class="col-12">
+              
+                  <button class="btn filterBtn" type="button" data-bs-toggle="collapse" data-bs-target="#alloptions" aria-expanded="true" aria-controls="alloptions">
+                    Filter options 
+                    <i data-feather="filter"></i>
+                  </button>
+
+                  <div class="collapse show" id="alloptions">
+                    <div class="filterBody">
+                      <div class="row">
+                     
+                      
+                        <div class=" col-lg-4 col-md-6 col-12 mb-2">
+                          <div class="form-floating ">
+                            <input type="Date" class="form-control" id="dateFrom" placeholder="0100000000">
+                            <label for="dateFrom">From</label>
+                          </div>
+                        </div>
+                        <div class=" col-lg-4 col-md-6 col-12 mb-2">
+                          <div class="form-floating ">
+                            <input type="date" class="form-control" id="dateTo" placeholder="AwB Example">
+                            <label for="dateTo">To</label>
+                          </div>
+                        </div>
+                        <div class=" col-lg-4 col-md-6 col-12 mb-2">
+                          <button type="button" class="btn applyFilter">Apply</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+              </div>
+              <!--   end filter   -->
+
+                <!-- datatable -->
+          <div class="row w-100">
+            <div class="col-12"> 
+              <table id="datatablePayment" class="display nowrap custom-datatable" >
+                      <thead>
+                          <tr> 
+                              <th># </th>
+                              <th>AWB</th>
+                              <th>Company Name</th>
+                              <th>Status</th>
+                              <th>Total Amount</th>
+                              <th>Ship Fees</th>
+                              <th>Company Ammount</th>
+                              <th>Operation Date</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr> 
+                            <td>#1 </td>                        
+                            <td>AWB 1</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                            <tr> 
+                            <td>#1 </td>                        
+                            <td>AWB 1</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                            <tr> 
+                            <td>#2 </td>                        
+                            <td>AWB 2</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                            <tr> 
+                            <td>#3 </td>                        
+                            <td>AWB 3</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                            <tr> 
+                            <td>#4 </td>                        
+                            <td>AWB 4</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                            <tr> 
+                            <td>#5 </td>                        
+                            <td>AWB 5</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                            <tr> 
+                            <td>#6 </td>                        
+                            <td>AWB 6</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                        <tr> 
+                            <td>#7 </td>                        
+                            <td>AWB 7</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                        <tr> 
+                            <td>#8 </td>                        
+                            <td>AWB 8</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                        <tr> 
+                            <td>#9 </td>                        
+                            <td>AWB 9</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                        <tr> 
+                            <td>#10 </td>                        
+                            <td>AWB 10</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                        <tr> 
+                            <td>#11 </td>                        
+                            <td>AWB 11</td>
+                            <td>Name example</td>
+                            <td><span>Status Example</span></td>
+                            <td>1000000</td>
+                            <td>1000000</td>
+                            <td>Amount example</td>
+                            <td>25-11-2022</td>
+                        </tr>
+                    </tbody>
+                  
+              </table>
             </div>
-          </div>
+          </div>  
+
+                <!-- datatable -->
+   </div>
         </div>
       </div>
       <!----end of container fluid----->
     </div>
+
+    <!-- Modaaal -->
+  <div class="modal fade custom-modal" id="importFile" tabindex="-1" aria-labelledby="importLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="importLabel">Import Orders</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+          <div class="input-group">
+            <input type="file" class="form-control" id="uploadFile" aria-describedby="uploadFileAddon" aria-label="Upload">
+            <button class="btn upload-btn-icon" type="button" id="uploadFileAddon">
+              <i data-feather="upload"></i>
+            </button>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-save">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-----------scripts------------>
     <script src="js/jquery.min.js"></script>
 
@@ -387,6 +500,17 @@
 
     <!------------feather icons---------->
     <script src="js/feather.min.js"></script>
+
+    <!--------Datatable-------->
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.buttons.min.js"></script>
+    <script src="js/jszip.min.js"></script>
+    <script src="js/pdfmake.min.js"></script>
+    <script src="js/vfs_fonts.js"></script>
+    <script src="js/buttons.html5.min.js"></script>
+    <script src="js/buttons.print.min.js"></script>
+    <script src="js/dataTables.responsive.min.js"></script>
+    <script src="js/customDatatable.js"></script>
 
     <script src="js/main.js"></script>
     <!------------------------------>

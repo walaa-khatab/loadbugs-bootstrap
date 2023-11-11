@@ -1,0 +1,40 @@
+.integration{
+    margin: 20px 20px 20px 0;
+    .section-title{
+        color: $main-color;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.02);
+        font-size: 24px;
+        font-weight: bold;
+        @include flex(row,start,center);
+        padding-bottom: 10px;
+        width: 25%;
+        .section-icon{
+            width: 35px;
+            height: 35px;
+            border-radius: 10px;
+            @include flex(row,center,center);
+            background-color: $main-color;
+            color: white;
+            margin-inline-end: 10px;
+        }
+    }
+
+    .token{
+        margin-top: 20px;
+        border: 2px solid $main-color;
+        padding: 20px;
+        width: 50%;
+        word-break: break-all;
+        @include bord-radius(10px);
+        color: $dark-text;
+    }
+}
+
+
+// Responsive ----------------------------------------------------
+
+@media (max-width:576px) {
+    .token{
+        width: 100%!important;
+    }
+}

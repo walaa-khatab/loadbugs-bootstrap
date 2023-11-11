@@ -30,9 +30,105 @@
         </div>
 
         <div class="header-right">
-          <button type="button" class="btn cart-icon">
-            <i data-feather="shopping-cart"></i>
-          </button>
+
+          <div class="cart">
+          
+              <button type="button" class="btn cart-icon" id="openCart">
+                <i data-feather="shopping-cart"></i>
+              </button>
+            
+          <!-- Cart dropdown -->
+            <div class="cart-dropdown d-none">
+              <div class="cart-header">
+                Cart Items
+                <button type="button" class="btn cart-icon" id="closeCart">
+                  <i data-feather="minimize"></i>
+                </button>
+              </div>
+               <div class="cart-drop-header">
+                  <div class="cart-num">
+                    <i data-feather="shopping-cart"></i>
+                    <span>2</span>
+                  </div>
+                  <div class="cart-total">
+                    Total : <span class="total"> 1200 $</span>
+                  </div>
+               </div>
+
+               <div class="cart-body">
+                <div class="cart-item" id="item-1">
+
+                  <div class="item-img">
+                    <img src="images/Mockup5.2105a159.png" alt="" width="100px">
+                  </div>
+
+                  <div class="item-info">
+                    <div class="item-title">Product Example</div>
+                    <span class="item-price">200$</span>
+                  </div>
+
+                  <div class="quant-btns">
+                    Quantity:
+                    <div class="qty-container">
+                      <button class="qty-btn-minus btn-light btn" type="button"><i data-feather="minus"></i></button>
+                      <input type="text" name="qty" value="0" class="input-qty"/>
+                      <button class="qty-btn-plus btn-light btn" type="button"><i data-feather="plus"></i></button>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="cart-item" id="item-1">
+
+                  <div class="item-img">
+                    <img src="images/Mockup5.2105a159.png" alt="" width="100px">
+                  </div>
+
+                  <div class="item-info">
+                    <div class="item-title">Product Example</div>
+                    <span class="item-price">200$</span>
+                  </div>
+
+                  <div class="quant-btns">
+                    Quantity:
+                    <div class="qty-container">
+                      <button class="qty-btn-minus btn-light btn" type="button"><i data-feather="minus"></i></button>
+                      <input type="text" name="qty" value="0" class="input-qty"/>
+                      <button class="qty-btn-plus btn-light btn" type="button"><i data-feather="plus"></i></button>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="cart-item" id="item-1">
+
+                  <div class="item-img">
+                    <img src="images/Mockup5.2105a159.png" alt="" width="100px">
+                  </div>
+
+                  <div class="item-info">
+                    <div class="item-title">Product Example</div>
+                    <span class="item-price">200$</span>
+                  </div>
+
+                  <div class="quant-btns">
+                    Quantity:
+                    <div class="qty-container">
+                      <button class="qty-btn-minus btn-light btn" type="button"><i data-feather="minus"></i></button>
+                      <input type="text" name="qty" value="0" class="input-qty"/>
+                      <button class="qty-btn-plus btn-light btn" type="button"><i data-feather="plus"></i></button>
+                    </div>
+                  </div>
+
+                </div> 
+               </div>
+
+                <button class="btn checkout-btn">Checkout</button>
+
+            </div>
+          <!-- end cartdropdown -->
+          </div>
+
           <span class="separator"></span>
           <div class="profile">
             <div class="dropdown">
@@ -98,7 +194,7 @@
                       data-bs-parent="#menu"
                     >
                       <li class="w-100">
-                        <a href="#" class="nav-link px-0 d-flex">
+                        <a href="dashboard.html" class="nav-link px-0 d-flex">
                           <i data-feather="activity"></i>
                           <span class="d-none ms-2 d-sm-inline">Analytics</span>
                         </a>
@@ -121,7 +217,7 @@
                       data-bs-parent="#menu"
                     >
                       <li class="w-100">
-                        <a href="#" class="nav-link px-0 d-flex">
+                        <a href="orders.html" class="nav-link px-0 d-flex">
                           <i data-feather="truck"></i>
                           <span class="d-none ms-2 d-sm-inline">All</span>
                         </a>
@@ -185,7 +281,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="#" class="nav-link px-0 d-flex">
+                        <a href="payment.html" class="nav-link px-0 d-flex">
                           <i data-feather="credit-card"></i>
                           <span class="d-none ms-2 d-sm-inline">Paymentes</span>
                         </a>
@@ -258,7 +354,7 @@
                     </ul>
                   </li>
                   <li class="nav-item py-2">
-                    <a href="./shop.html" class="nav-link px-0 align-middle">
+                    <a href="shop.html" class="nav-link px-0 align-middle">
                       <i data-feather="shopping-cart"></i>
                       <span class="ms-1 d-none d-sm-inline">SHOP</span>
                     </a>
@@ -267,7 +363,37 @@
               </div>
             </div>
           </div>
-          <div class="col py-3">page content here</div>
+          <div class="col py-3">
+            <section class="integration">
+                <div class="section-title">
+                    <div class="section-icon">
+                        <i data-feather="link"></i> 
+                    </div> API
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="order-export-add">
+                            <div class="export-group">
+                                <button type="button" class="btn btn-wz-icon">
+                                    Download Bostman File
+                                <i class="ms-2" data-feather="download"></i>
+                                </button>
+                                <button type="button" id="ViewToken" class="btn btn-wz-icon" >
+                                    View API Token
+                                <i  data-feather="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <div class="token d-none">
+                            KX8fOuuQnLzmrihH2zi8vOqgDYCJKShOB6AXoEISXbTv95LtVqTaFEPDP5naOrMIijIw7eFkvlsBfJ1ZtFwMOAlsXQWr7Ug3a39u
+                        </div>
+                    </div>
+                </div>
+            </section>
+          </div>
         </div>
       </div>
       <!----end of container fluid----->

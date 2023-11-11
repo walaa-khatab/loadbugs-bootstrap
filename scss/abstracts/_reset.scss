@@ -1,6 +1,19 @@
 body{
     font-family: 'DM Sans',sans-serif;
     overflow-x: hidden;
+    &.overlay{
+        &::before{
+            content: "";
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+    }
 }
 button,
 button:focus,

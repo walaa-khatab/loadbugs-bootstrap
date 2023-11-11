@@ -1093,10 +1093,7 @@ div.dt-buttons > div.dt-button-split .dt-button:hover {
   padding-right: 5px;
 }
 
-.integration {
-  margin: 20px 20px 20px 0;
-}
-.integration .section-title {
+.section-title {
   color: #2b4cb0;
   border-bottom: 2px solid rgba(0, 0, 0, 0.02);
   font-size: 24px;
@@ -1108,7 +1105,7 @@ div.dt-buttons > div.dt-button-split .dt-button:hover {
   padding-bottom: 10px;
   width: 25%;
 }
-.integration .section-title .section-icon {
+.section-title .section-icon {
   width: 35px;
   height: 35px;
   border-radius: 10px;
@@ -1119,6 +1116,13 @@ div.dt-buttons > div.dt-button-split .dt-button:hover {
   background-color: #2b4cb0;
   color: white;
   margin-inline-end: 10px;
+}
+.section-title .section-icon svg {
+  width: 20px;
+}
+
+.integration {
+  margin: 20px 20px 20px 0;
 }
 .integration .token {
   margin-top: 20px;
@@ -1137,6 +1141,47 @@ div.dt-buttons > div.dt-button-split .dt-button:hover {
   .token {
     width: 100% !important;
   }
+}
+.account .edit-button {
+  background-color: #f8ac2d;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+.account .edit-button:hover {
+  opacity: 0.8;
+}
+.account .account-row {
+  border: 1px solid #2b4cb0;
+  padding: 20px;
+  border-radius: 5px;
+  margin-inline: 0px;
+}
+.account .account-row .user-info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+.account .account-row .user-info .title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2b4cb0;
+  width: 150px;
+}
+.account .account-row .user-info .value {
+  font-size: 18px;
+  color: #313439;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
+  width: calc(100% - 200px);
 }
 
 /*# sourceMappingURL=app.css.map */

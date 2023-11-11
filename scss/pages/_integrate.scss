@@ -1,23 +1,25 @@
+.section-title{
+    color: $main-color;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.02);
+    font-size: 24px;
+    font-weight: bold;
+    @include flex(row,start,center);
+    padding-bottom: 10px;
+    width: 25%;
+    .section-icon{
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        @include flex(row,center,center);
+        background-color: $main-color;
+        color: white;
+        margin-inline-end: 10px;
+        svg{width: 20px;}
+    }
+}
+
 .integration{
     margin: 20px 20px 20px 0;
-    .section-title{
-        color: $main-color;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.02);
-        font-size: 24px;
-        font-weight: bold;
-        @include flex(row,start,center);
-        padding-bottom: 10px;
-        width: 25%;
-        .section-icon{
-            width: 35px;
-            height: 35px;
-            border-radius: 10px;
-            @include flex(row,center,center);
-            background-color: $main-color;
-            color: white;
-            margin-inline-end: 10px;
-        }
-    }
 
     .token{
         margin-top: 20px;

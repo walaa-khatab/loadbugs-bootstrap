@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loadbugs</title>
+    <!------faveicons------->
+    <link rel="icon" type="image/x-icon" href="images/fav.png" />
+    <link rel="apple-touch-icon" href="images/fav.png" />
+    <!----------Styles------------->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/daterangepicker.css" />
+
+    <link rel="stylesheet" href="css/app.css" />
+    <!----------------------------->
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <div class="header-main-logo">
+            <img src="images/logo.png" alt="" />
+          </div>
+          <div class="header-logo">
+            <img src="images/dlvago.png" alt="" />
+          </div>
+        </div>
+
+        <div class="header-right">
+
+          <div class="cart">
+          
+              <button type="button" class="btn cart-icon" id="openCart">
+                <i data-feather="shopping-cart"></i>
+              </button>
+            
+          <!-- Cart dropdown -->
+            <div class="cart-dropdown d-none">
+              <div class="cart-header">
+                Cart Items
+                <button type="button" class="btn cart-icon" id="closeCart">
+                  <i data-feather="minimize"></i>
+                </button>
+              </div>
+               <div class="cart-drop-header">
+                  <div class="cart-num">
+                    <i data-feather="shopping-cart"></i>
+                    <span>2</span>
+                  </div>
+                  <div class="cart-total">
+                    Total : <span class="total"> 1200 $</span>
+                  </div>
+               </div>
+
+               <div class="cart-body">
+                <div class="cart-item" id="item-1">
+
+                  <div class="item-img">
+                    <img src="images/Mockup5.2105a159.png" alt="" width="100px">
+                  </div>
+
+                  <div class="item-info">
+                    <div class="item-title">Product Example</div>
+                    <span class="item-price">200$</span>
+                  </div>
+
+                  <div class="quant-btns">
+                    Quantity:
+                    <div class="qty-container">
+                      <button class="qty-btn-minus btn-light btn" type="button"><i data-feather="minus"></i></button>
+                      <input type="text" name="qty" value="0" class="input-qty"/>
+                      <button class="qty-btn-plus btn-light btn" type="button"><i data-feather="plus"></i></button>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="cart-item" id="item-1">
+
+                  <div class="item-img">
+                    <img src="images/Mockup5.2105a159.png" alt="" width="100px">
+                  </div>
+
+                  <div class="item-info">
+                    <div class="item-title">Product Example</div>
+                    <span class="item-price">200$</span>
+                  </div>
+
+                  <div class="quant-btns">
+                    Quantity:
+                    <div class="qty-container">
+                      <button class="qty-btn-minus btn-light btn" type="button"><i data-feather="minus"></i></button>
+                      <input type="text" name="qty" value="0" class="input-qty"/>
+                      <button class="qty-btn-plus btn-light btn" type="button"><i data-feather="plus"></i></button>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="cart-item" id="item-1">
+
+                  <div class="item-img">
+                    <img src="images/Mockup5.2105a159.png" alt="" width="100px">
+                  </div>
+
+                  <div class="item-info">
+                    <div class="item-title">Product Example</div>
+                    <span class="item-price">200$</span>
+                  </div>
+
+                  <div class="quant-btns">
+                    Quantity:
+                    <div class="qty-container">
+                      <button class="qty-btn-minus btn-light btn" type="button"><i data-feather="minus"></i></button>
+                      <input type="text" name="qty" value="0" class="input-qty"/>
+                      <button class="qty-btn-plus btn-light btn" type="button"><i data-feather="plus"></i></button>
+                    </div>
+                  </div>
+
+                </div> 
+               </div>
+
+                <button class="btn checkout-btn">Checkout</button>
+
+            </div>
+          <!-- end cartdropdown -->
+          </div>
+
+          <span class="separator"></span>
+          <div class="profile">
+            <div class="dropdown">
+              <button
+                class="btn profile_button dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                User Name
+                <i data-feather="chevron-down"></i>
+              </button>
+              <div
+                class="dropdown-menu profile_drop"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <div>
+                  <a class="dropdown-item control" href="#">
+                    <button class="btn control-icon" type="button">
+                      <i data-feather="cpu"></i>
+                    </button>
+                    Control Panel</a
+                  >
+                </div>
+                <a class="dropdown-item sign-out" href="#">Sign out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- body -->
+      <div class="content-body">
+        <div class="row flex-nowrap h-100">
+          <div class="col-auto col-md-4 col-xl-2 px-sm-2 px-0 my-auto">
+            <!-- sidebar -->
+            <div class="sidebar py-5">
+              <div
+                class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white"
+              >
+                <ul
+                  class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                  id="menu"
+                >
+                  <li class="nav-item py-2">
+                    <a href="#" class="nav-link align-middle px-0 d-flex">
+                      <i data-feather="bell"></i>
+                      <span class="ms-1 d-none d-sm-inline">NOTIFICATIONS</span>
+                    </a>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a
+                      href="#submenu1"
+                      data-bs-toggle="collapse"
+                      class="nav-link px-0 align-middle collapsed"
+                    >
+                      <i data-feather="menu"></i>
+                      <span class="ms-1 d-none d-sm-inline">DASHBOSRDS</span>
+                    </a>
+                    <ul
+                      class="collapse flex-column ms-1"
+                      id="submenu1"
+                      data-bs-parent="#menu"
+                    >
+                      <li class="w-100">
+                        <a href="dashboard.html" class="nav-link px-0 d-flex">
+                          <i data-feather="activity"></i>
+                          <span class="d-none ms-2 d-sm-inline">Analytics</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item py-2">
+                    <a
+                      href="#submenu2"
+                      data-bs-toggle="collapse"
+                      class="nav-link px-0 align-middle"
+                    >
+                      <i data-feather="truck"></i>
+                      <span class="ms-1 d-none d-sm-inline">ORDERS</span></a
+                    >
+                    <ul
+                      class="collapse flex-column ms-1"
+                      id="submenu2"
+                      data-bs-parent="#menu"
+                    >
+                      <li class="w-100">
+                        <a href="orders.html" class="nav-link px-0 d-flex">
+                          <i data-feather="truck"></i>
+                          <span class="d-none ms-2 d-sm-inline">All</span>
+                        </a>
+                      </li>
+                      <li class="w-100">
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="truck"></i>
+                          <span class="d-none ms-2 d-sm-inline">Returned</span>
+                        </a>
+                      </li>
+                      <li class="w-100">
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="truck"></i>
+                          <span class="d-none ms-2 d-sm-inline">Not Ready</span>
+                        </a>
+                      </li>
+                      <li class="w-100">
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="truck"></i>
+                          <span class="d-none ms-2 d-sm-inline">Pickups</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a
+                      href="#submenu3"
+                      data-bs-toggle="collapse"
+                      class="nav-link px-0 align-middle"
+                    >
+                      <i data-feather="credit-card"></i>
+                      <span class="ms-1 d-none d-sm-inline">BALANCE</span>
+                    </a>
+                    <ul
+                      class="collapse flex-column ms-1"
+                      id="submenu3"
+                      data-bs-parent="#menu"
+                    >
+                      <li class="w-100">
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="credit-card"></i>
+                          <span class="d-none ms-2 d-sm-inline">Settled</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="credit-card"></i>
+                          <span class="d-none ms-2 d-sm-inline">Collected</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="credit-card"></i>
+                          <span class="d-none ms-2 d-sm-inline">Delivred</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="credit-card"></i>
+                          <span class="d-none ms-2 d-sm-inline">WIP</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="payment.html" class="nav-link px-0 d-flex">
+                          <i data-feather="credit-card"></i>
+                          <span class="d-none ms-2 d-sm-inline">Paymentes</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a
+                      href="#submenu4"
+                      data-bs-toggle="collapse"
+                      class="nav-link px-0 align-middle"
+                    >
+                      <i data-feather="user"></i>
+                      <span class="ms-1 d-none d-sm-inline">Account</span>
+                    </a>
+                    <ul
+                      class="collapse flex-column ms-1"
+                      id="submenu4"
+                      data-bs-parent="#menu"
+                    >
+                      
+                      <li>
+                        <a href="account.html" class="nav-link px-0 d-flex">
+                          <i data-feather="user"></i>
+                          <span class="d-none ms-2 d-sm-inline">Details</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="change-pass.html" class="nav-link px-0 d-flex">
+                          <i data-feather="lock"></i>
+                          <span class="d-none ms-2 d-sm-inline">Psssword</span>
+                        </a>
+                      </li>
+                      <li class="w-100">
+                        <a href="edit-profile.html" class="nav-link px-0 d-flex">
+                          <i data-feather="map-pin"></i>
+                          <span class="d-none ms-2 d-sm-inline">Edit Profile</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a
+                      href="#submenu5"
+                      data-bs-toggle="collapse"
+                      class="nav-link px-0 align-middle"
+                    >
+                      <i data-feather="shopping-bag"></i>
+                      <span class="ms-1 d-none d-sm-inline">INTEGRATIONS</span>
+                    </a>
+                    <ul
+                      class="collapse flex-column ms-1"
+                      id="submenu5"
+                      data-bs-parent="#menu"
+                    >
+                      <li class="w-100">
+                        <a
+                          href="https://apps.shopify.com/"
+                          class="nav-link px-0 d-flex"
+                        >
+                          <i data-feather="shopping-bag"></i>
+                          <span class="d-none ms-2 d-sm-inline">Shopify</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link px-0 d-flex">
+                          <i data-feather="code"></i>
+                          <span class="d-none ms-2 d-sm-inline">API</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a href="shop.html" class="nav-link px-0 align-middle">
+                      <i data-feather="shopping-cart"></i>
+                      <span class="ms-1 d-none d-sm-inline">SHOP</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col py-3">
+             <section class="account">
+                <div class="section-title">
+                    <div class="section-icon">
+                        <i data-feather="edit"></i> 
+                    </div> Edit Profile
+                </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!----end of container fluid----->
+    </div>
+    <!-----------scripts------------>
+    <script src="js/jquery.min.js"></script>
+
+    <!---------bootstrap--------->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!---------daterangepicker--------->
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.min.js"></script>
+
+    <!------------feather icons---------->
+    <script src="js/feather.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <!------------------------------>
+  </body>
+</html>

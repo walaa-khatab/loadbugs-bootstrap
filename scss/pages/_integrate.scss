@@ -5,7 +5,8 @@
     font-weight: bold;
     @include flex(row,start,center);
     padding-bottom: 10px;
-    width: 25%;
+    min-width: 25%;
+    margin-bottom: 20px;
     .section-icon{
         width: 35px;
         height: 35px;
@@ -14,6 +15,7 @@
         background-color: $main-color;
         color: white;
         margin-inline-end: 10px;
+        flex-shrink: 0;
         svg{width: 20px;}
     }
 }

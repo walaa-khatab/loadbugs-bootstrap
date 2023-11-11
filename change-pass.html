@@ -289,19 +289,15 @@
                     </ul>
                   </li>
                   <li class="nav-item py-2">
-                    <a
-                      href="#submenu4"
+                    <a href="#submenu4"
                       data-bs-toggle="collapse"
-                      class="nav-link px-0 align-middle"
-                    >
+                      class="nav-link px-0 align-middle" >
                       <i data-feather="user"></i>
                       <span class="ms-1 d-none d-sm-inline">Account</span>
                     </a>
-                    <ul
-                      class="collapse flex-column ms-1"
+                    <ul class="collapse flex-column ms-1"
                       id="submenu4"
-                      data-bs-parent="#menu"
-                    >
+                      data-bs-parent="#menu" >
                       
                       <li>
                         <a href="account.html" class="nav-link px-0 d-flex">
@@ -317,37 +313,31 @@
                       </li>
                       <li class="w-100">
                         <a href="edit-profile.html" class="nav-link px-0 d-flex">
-                          <i data-feather="map-pin"></i>
+                          <i data-feather="user-check"></i>
                           <span class="d-none ms-2 d-sm-inline">Edit Profile</span>
                         </a>
                       </li>
                     </ul>
                   </li>
                   <li class="nav-item py-2">
-                    <a
-                      href="#submenu5"
+                    <a href="#submenu5"
                       data-bs-toggle="collapse"
-                      class="nav-link px-0 align-middle"
-                    >
+                      class="nav-link px-0 align-middle">
                       <i data-feather="shopping-bag"></i>
                       <span class="ms-1 d-none d-sm-inline">INTEGRATIONS</span>
                     </a>
-                    <ul
-                      class="collapse flex-column ms-1"
+                    <ul class="collapse flex-column ms-1"
                       id="submenu5"
-                      data-bs-parent="#menu"
-                    >
+                      data-bs-parent="#menu">
                       <li class="w-100">
-                        <a
-                          href="https://apps.shopify.com/"
-                          class="nav-link px-0 d-flex"
-                        >
+                        <a href="https://apps.shopify.com/"
+                          class="nav-link px-0 d-flex">
                           <i data-feather="shopping-bag"></i>
                           <span class="d-none ms-2 d-sm-inline">Shopify</span>
                         </a>
                       </li>
                       <li>
-                        <a href="#" class="nav-link px-0 d-flex">
+                        <a href="api.html" class="nav-link px-0 d-flex">
                           <i data-feather="code"></i>
                           <span class="d-none ms-2 d-sm-inline">API</span>
                         </a>
@@ -365,12 +355,42 @@
             </div>
           </div>
           <div class="col py-3">
+
+            
              <section class="account">
                 <div class="section-title">
                     <div class="section-icon">
                         <i data-feather="lock"></i> 
                     </div> Change Password
                 </div>
+               
+                <!-- account -->
+                <div class="row account-row">
+                   
+                    <div class="col-lg-7 col-12 mb-2 ">
+                        <div class="form-floating ">
+                            <input type="password" class="form-control" id="oldPass" placeholder="">
+                            <label for="oldPass">Old Password</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-12 mb-2">
+                        <div class="form-floating ">
+                            <input type="password" class="form-control" id="newPass" placeholder="">
+                            <label for="newPass">New Password</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-12 mb-2">
+                        <div class="form-floating ">
+                            <input type="password" class="form-control" id="confirmPass" placeholder="">
+                            <label for="confirmPass">Confirm Password</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7 d-flex justify-content-end">
+                        <button type="button" class="btn edit-button"> Change Password </button>
+                    </div>
+                </div>
+
             </section>
           </div>
         </div>

@@ -586,7 +586,6 @@ div.dt-buttons > div.dt-button-split .dt-button {
   margin-top: 15px; }
   .dashboard-contents .right-part .box-info {
     text-align: center;
-    width: 100px;
     border-right: 1px solid #ddd;
     padding: 20px 10px; }
     .dashboard-contents .right-part .box-info svg {

@@ -164,7 +164,7 @@
       <div class="content-body">
         <div class="row flex-nowrap h-100">
           <div class="col-auto col-md-4 col-xl-2 px-sm-2 px-0 my-auto">
-             <!-- sidebar -->
+            <!-- sidebar -->
             <div class="sidebar py-5">
               <div
                 class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white"
@@ -176,7 +176,7 @@
                   <li class="nav-item py-2">
                     <a href="#" class="nav-link align-middle px-0 d-flex">
                       <i data-feather="bell"></i>
-                      <span class="ms-1 ">NOTIFICATIONS</span>
+                      <span class="ms-1 d-none d-sm-inline">NOTIFICATIONS</span>
                     </a>
                   </li>
                   <li class="nav-item py-2">
@@ -186,7 +186,7 @@
                       class="nav-link px-0 align-middle collapsed"
                     >
                       <i data-feather="menu"></i>
-                      <span class="ms-1 ">DASHBOSRDS</span>
+                      <span class="ms-1 d-none d-sm-inline">DASHBOSRDS</span>
                     </a>
                     <ul
                       class="collapse flex-column ms-1"
@@ -209,7 +209,7 @@
                       class="nav-link px-0 align-middle"
                     >
                       <i data-feather="truck"></i>
-                      <span class="ms-1 ">ORDERS</span></a
+                      <span class="ms-1 d-none d-sm-inline">ORDERS</span></a
                     >
                     <ul
                       class="collapse flex-column ms-1"
@@ -249,7 +249,7 @@
                       class="nav-link px-0 align-middle"
                     >
                       <i data-feather="credit-card"></i>
-                      <span class="ms-1 ">BALANCE</span>
+                      <span class="ms-1 d-none d-sm-inline">BALANCE</span>
                     </a>
                     <ul
                       class="collapse flex-column ms-1"
@@ -293,7 +293,7 @@
                       data-bs-toggle="collapse"
                       class="nav-link px-0 align-middle" >
                       <i data-feather="user"></i>
-                      <span class="ms-1 ">Account</span>
+                      <span class="ms-1 d-none d-sm-inline">Account</span>
                     </a>
                     <ul class="collapse flex-column ms-1"
                       id="submenu4"
@@ -324,7 +324,7 @@
                       data-bs-toggle="collapse"
                       class="nav-link px-0 align-middle">
                       <i data-feather="shopping-bag"></i>
-                      <span class="ms-1 ">INTEGRATIONS</span>
+                      <span class="ms-1 d-none d-sm-inline">INTEGRATIONS</span>
                     </a>
                     <ul class="collapse flex-column ms-1"
                       id="submenu5"
@@ -347,7 +347,7 @@
                   <li class="nav-item py-2">
                     <a href="shop.html" class="nav-link px-0 align-middle">
                       <i data-feather="shopping-cart"></i>
-                      <span class="ms-1 ">SHOP</span>
+                      <span class="ms-1 d-none d-sm-inline">SHOP</span>
                     </a>
                   </li>
                 </ul>
@@ -355,34 +355,55 @@
             </div>
           </div>
           <div class="col py-3 responsive-col">
-            <section class="integration">
+             <section class="account">
                 <div class="section-title">
                     <div class="section-icon">
-                        <i data-feather="link"></i> 
-                    </div> API
+                        <i data-feather="user"></i> 
+                    </div> My Account
+                </div>
+                <div class="row">
+                     <div class="col-12 d-flex justify-content-end">
+                        <a href="edit-profile.html" class="btn edit-button"> Edit </a>
+                    </div>
+                </div>
+                <!-- account -->
+                <div class="row account-row">
+                   
+                    <div class="col-lg-6 col-12 user-info">
+                        <span class="title">User Name</span>
+                        <div class="value"> User Name Example</div>
+                    </div>
+                    <div class="col-lg-6 col-12 user-info">
+                        <span class="title">Company Name</span>
+                        <div class="value"> Company Example</div>
+                    </div>
+                    <div class="col-lg-6 col-12 user-info">
+                        <span class="title">E-mail</span>
+                        <div class="value"> EmailExample@gmail.com</div>
+                    </div>
+                    <div class="col-lg-6 col-12 user-info">
+                        <span class="title">Phone Number</span>
+                        <div class="value"> 010123456789</div>
+                    </div>
+                    <div class="col-lg-6 col-12 user-info">
+                        <span class="title">City</span>
+                        <div class="value"> Cairo </div>
+                    </div>
+                    <div class="col-lg-6 col-12 user-info">
+                        <span class="title">Address</span>
+                        <div class="value"> Cairo st </div>
+                    </div>
+                    <div class="col-lg-6 col-12 user-info">
+                        <span class="title">Product type</span>
+                        <div class="value"> product type </div>
+                    </div>
+                    <div class="col-lg-6 col-12 user-info">
+                        <span class="title">Order type</span>
+                        <div class="value"> Not Opened </div>
+                    </div>
+
                 </div>
 
-                <div class="row">
-                    <div class="col-12">
-                        <div class="order-export-add">
-                            <div class="export-group">
-                                <button type="button" class="btn btn-wz-icon">
-                                    Download Bostman File
-                                <i class="ms-2" data-feather="download"></i>
-                                </button>
-                                <button type="button" id="ViewToken" class="btn btn-wz-icon" >
-                                    View API Token
-                                <i  data-feather="eye"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <div class="token d-none">
-                            KX8fOuuQnLzmrihH2zi8vOqgDYCJKShOB6AXoEISXbTv95LtVqTaFEPDP5naOrMIijIw7eFkvlsBfJ1ZtFwMOAlsXQWr7Ug3a39u
-                        </div>
-                    </div>
-                </div>
             </section>
           </div>
         </div>

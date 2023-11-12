@@ -155,14 +155,22 @@ select:focus-visible,
           height: 100%; }
         .header .header-right .profile_drop .sign-out:hover::after {
           background: rgba(255, 255, 255, 0.2); }
+  @media (max-width: 576px) {
+    .header {
+      position: fixed;
+      top: 0px;
+      background-color: #fff;
+      opacity: 1;
+      z-index: 100; } }
 
 .content-body {
-  height: 90vh; }
+  height: 90vh;
+  position: relative; }
   .content-body .sidebar {
     background-color: white;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px !important;
     border-radius: 20px;
-    padding: 0 15px;
+    padding: 0 13px;
     margin-top: auto;
     max-width: 240px;
     margin-left: 5px; }
@@ -196,6 +204,15 @@ select:focus-visible,
       padding-left: 10px !important; }
       .content-body .sidebar li ul span {
         font-size: 13px; }
+    @media (max-width: 576px) {
+      .content-body .sidebar {
+        position: fixed;
+        top: 17%;
+        left: 10px; } }
+  @media (max-width: 576px) {
+    .content-body .responsive-col {
+      margin-left: 100px;
+      margin-top: 100px; } }
 
 div.dataTables_wrapper {
   overflow: hidden; }
@@ -921,30 +938,35 @@ div.dt-buttons > div.dt-button-split .dt-button {
       font-size: 12px;
       padding-right: 5px; }
 
-.integration {
-  margin: 20px 20px 20px 0; }
-  .integration .section-title {
-    color: #2b4cb0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.02);
-    font-size: 24px;
-    font-weight: bold;
+.section-title {
+  color: #2b4cb0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.02);
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 10px;
+  min-width: 25%;
+  margin-bottom: 20px; }
+  .section-title .section-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding-bottom: 10px;
-    width: 25%; }
-    .integration .section-title .section-icon {
-      width: 35px;
-      height: 35px;
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      background-color: #2b4cb0;
-      color: white;
-      margin-inline-end: 10px; }
+    background-color: #2b4cb0;
+    color: white;
+    margin-inline-end: 10px;
+    flex-shrink: 0; }
+    .section-title .section-icon svg {
+      width: 20px; }
+
+.integration {
+  margin: 20px 20px 20px 0; }
   .integration .token {
     margin-top: 20px;
     border: 2px solid #2b4cb0;
@@ -960,5 +982,33 @@ div.dt-buttons > div.dt-button-split .dt-button {
 @media (max-width: 576px) {
   .token {
     width: 100% !important; } }
+.account .edit-button {
+  background-color: #f8ac2d;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 100px;
+  margin-bottom: 10px; }
+  .account .edit-button:hover {
+    opacity: .8; }
+.account .account-row {
+  border: 1px solid #2b4cb0;
+  padding: 20px;
+  border-radius: 5px;
+  margin-inline: 0px; }
+  .account .account-row .user-info {
+    margin-bottom: 10px; }
+    .account .account-row .user-info .title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #2b4cb0;
+      padding-inline-start: 30px; }
+    .account .account-row .user-info .value {
+      font-size: 18px;
+      color: #313439;
+      padding: 10px 30px;
+      background-color: rgba(0, 0, 0, 0.02);
+      border-radius: 10px;
+      width: 100%; }
 
 /*# sourceMappingURL=app.css.map */

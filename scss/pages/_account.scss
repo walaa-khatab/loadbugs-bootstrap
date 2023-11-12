@@ -1,0 +1,40 @@
+.account{
+    .edit-button{
+        background-color: $btn-color;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        min-width: 100px;
+        margin-bottom: 10px;
+        &:hover{
+            opacity: .8;
+        }        
+    }
+    .account-row{
+        border: 1px solid $main-color;
+        padding: 20px;
+        border-radius: 5px;
+        margin-inline: 0px;
+
+    .user-info{        
+        margin-bottom: 10px;
+        .title{
+            font-size: 18px;
+            font-weight: bold;
+            color: $main-color;
+            padding-inline-start: 30px;
+        }
+        .value{
+            font-size: 18px;
+            color: $dark-text;
+            padding: 10px 30px;
+            background-color: rgba(0, 0, 0 ,.02);
+            border-radius: 10px;
+            width: 100%;
+        }
+    }
+
+    }
+    
+
+}

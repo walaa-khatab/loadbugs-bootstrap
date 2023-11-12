@@ -164,7 +164,7 @@
       <div class="content-body">
         <div class="row flex-nowrap h-100">
           <div class="col-auto col-md-4 col-xl-2 px-sm-2 px-0 my-auto">
-             <!-- sidebar -->
+            <!-- sidebar -->
             <div class="sidebar py-5">
               <div
                 class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white"
@@ -176,7 +176,7 @@
                   <li class="nav-item py-2">
                     <a href="#" class="nav-link align-middle px-0 d-flex">
                       <i data-feather="bell"></i>
-                      <span class="ms-1 ">NOTIFICATIONS</span>
+                      <span class="ms-1 d-none d-sm-inline">NOTIFICATIONS</span>
                     </a>
                   </li>
                   <li class="nav-item py-2">
@@ -186,7 +186,7 @@
                       class="nav-link px-0 align-middle collapsed"
                     >
                       <i data-feather="menu"></i>
-                      <span class="ms-1 ">DASHBOSRDS</span>
+                      <span class="ms-1 d-none d-sm-inline">DASHBOSRDS</span>
                     </a>
                     <ul
                       class="collapse flex-column ms-1"
@@ -209,7 +209,7 @@
                       class="nav-link px-0 align-middle"
                     >
                       <i data-feather="truck"></i>
-                      <span class="ms-1 ">ORDERS</span></a
+                      <span class="ms-1 d-none d-sm-inline">ORDERS</span></a
                     >
                     <ul
                       class="collapse flex-column ms-1"
@@ -249,7 +249,7 @@
                       class="nav-link px-0 align-middle"
                     >
                       <i data-feather="credit-card"></i>
-                      <span class="ms-1 ">BALANCE</span>
+                      <span class="ms-1 d-none d-sm-inline">BALANCE</span>
                     </a>
                     <ul
                       class="collapse flex-column ms-1"
@@ -293,7 +293,7 @@
                       data-bs-toggle="collapse"
                       class="nav-link px-0 align-middle" >
                       <i data-feather="user"></i>
-                      <span class="ms-1 ">Account</span>
+                      <span class="ms-1 d-none d-sm-inline">Account</span>
                     </a>
                     <ul class="collapse flex-column ms-1"
                       id="submenu4"
@@ -324,7 +324,7 @@
                       data-bs-toggle="collapse"
                       class="nav-link px-0 align-middle">
                       <i data-feather="shopping-bag"></i>
-                      <span class="ms-1 ">INTEGRATIONS</span>
+                      <span class="ms-1 d-none d-sm-inline">INTEGRATIONS</span>
                     </a>
                     <ul class="collapse flex-column ms-1"
                       id="submenu5"
@@ -347,7 +347,7 @@
                   <li class="nav-item py-2">
                     <a href="shop.html" class="nav-link px-0 align-middle">
                       <i data-feather="shopping-cart"></i>
-                      <span class="ms-1 ">SHOP</span>
+                      <span class="ms-1 d-none d-sm-inline">SHOP</span>
                     </a>
                   </li>
                 </ul>
@@ -355,34 +355,42 @@
             </div>
           </div>
           <div class="col py-3 responsive-col">
-            <section class="integration">
+
+            
+             <section class="account">
                 <div class="section-title">
                     <div class="section-icon">
-                        <i data-feather="link"></i> 
-                    </div> API
+                        <i data-feather="lock"></i> 
+                    </div> Change Password
+                </div>
+               
+                <!-- account -->
+                <div class="row account-row">
+                   
+                    <div class="col-lg-7 col-12 mb-2 ">
+                        <div class="form-floating ">
+                            <input type="password" class="form-control" id="oldPass" placeholder="">
+                            <label for="oldPass">Old Password</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-12 mb-2">
+                        <div class="form-floating ">
+                            <input type="password" class="form-control" id="newPass" placeholder="">
+                            <label for="newPass">New Password</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-12 mb-2">
+                        <div class="form-floating ">
+                            <input type="password" class="form-control" id="confirmPass" placeholder="">
+                            <label for="confirmPass">Confirm Password</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7 d-flex justify-content-end">
+                        <button type="button" class="btn edit-button"> Change Password </button>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-12">
-                        <div class="order-export-add">
-                            <div class="export-group">
-                                <button type="button" class="btn btn-wz-icon">
-                                    Download Bostman File
-                                <i class="ms-2" data-feather="download"></i>
-                                </button>
-                                <button type="button" id="ViewToken" class="btn btn-wz-icon" >
-                                    View API Token
-                                <i  data-feather="eye"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <div class="token d-none">
-                            KX8fOuuQnLzmrihH2zi8vOqgDYCJKShOB6AXoEISXbTv95LtVqTaFEPDP5naOrMIijIw7eFkvlsBfJ1ZtFwMOAlsXQWr7Ug3a39u
-                        </div>
-                    </div>
-                </div>
             </section>
           </div>
         </div>

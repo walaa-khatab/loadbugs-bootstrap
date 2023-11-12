@@ -179,7 +179,7 @@ select:focus-visible,
         @media (min-width: 576px) {
           .content-body .sidebar a span,
           .content-body .sidebar .nav-link span {
-            display: none; } }
+            display: inline; } }
       @media (max-width: 576px) {
         .content-body .sidebar a:hover,
         .content-body .sidebar .nav-link:hover {

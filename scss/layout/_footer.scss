@@ -6,6 +6,15 @@
         padding: 0 30px;
         width: 100%;
         @include flex(row,space-between,center);
+        @media (max-width:767px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            .copyrights{
+                font-size: 12px;
+            }
+        }
+        flex-wrap: wrap;
         .footer-logo{
             width: 100px;
             img{

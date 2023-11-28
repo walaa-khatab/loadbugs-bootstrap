@@ -1,0 +1,25 @@
+    .footer{
+        background-color: white;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        border-radius: 20px;
+        min-height: 70px;
+        padding: 0 30px;
+        width: 100%;
+        @include flex(row,space-between,center);
+        .footer-logo{
+            width: 100px;
+            img{
+                @extend %img-full-contain;
+            }
+        }
+        .social-links{
+            @include flex(row,center,center);
+            gap:30px;
+            .so-link{
+                color: $main-color;
+                &:hover{
+                    color: $text-color;
+                }
+            }
+        }
+    }

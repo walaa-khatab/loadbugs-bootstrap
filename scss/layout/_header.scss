@@ -7,8 +7,7 @@
     top: 0;
     left: auto;
     right: 0;
-    // background-color: #1b97f5;
-   
+    // background-color: #1b97f5;   
     position: relative;
     @include flex(row,space-between,center);
     .header-left{
@@ -109,6 +108,7 @@
                         background: rgba(255, 255, 255, 0.2);
                     }
                 }
+
             }
         }
     }
